@@ -8,7 +8,7 @@ import icon_1 from '@/assets/images/icon/icon_85.svg';
 import icon_2 from '@/assets/images/icon/icon_86.svg';
 import icon_3 from '@/assets/images/icon/icon_87.svg';
 // gallery images
-import gallery_1 from '@/assets/images/gallery/img_17.jpg';
+import gallery_1 from '@/assets/images/gallery/solar-furniture.jpg';
 import gallery_2 from '@/assets/images/gallery/img_18.jpg';
 import gallery_3 from '@/assets/images/gallery/img_19.jpg';
 import ProjectDetailsFeature from './project-details-feature';

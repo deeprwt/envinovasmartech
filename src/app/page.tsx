@@ -26,6 +26,8 @@ import BlockFeatureThree from "@/components/block-feature/block-feature-three";
 import OurCompanySection from "@/components/company/our-company-section";
 import ProjectFourArea from "@/components/project/project-v4-area";
 import FeedbackTwo from "@/components/feedback/feedback-two";
+import ProjectDetailsArea from "@/components/project-details/project-details-v1-area";
+import ProjectDetailsThreeArea from "@/components/project-details/project-details-v3-area";
 
 const backImg1 = {
   backgroundImage: `url('${bg_image1.src}')`,
@@ -85,6 +87,8 @@ export default function HomePage() {
           <OurCompanySection />
 
           <ProjectFourArea />
+
+          <ProjectDetailsThreeArea />
           <ClintLogo />
 
           <div
@@ -304,7 +308,7 @@ export default function HomePage() {
             </div>
           </div>
           <PopUpModal />
-         
+
           <FeedbackTwo />
 
           <div className="block-feature-eleven contact-us-section mt-150 lg-mt-80">

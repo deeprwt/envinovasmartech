@@ -116,11 +116,11 @@ const slider_logos:StaticImageData[] = [img1, img2, img3, img5, img1, img2, img3
 const ClintLogo = () => {
   return (
     <>
-        <div className="partner-logo-one pt-80 lg-pt-40 pb-80 lg-pb-40 service-details">
+        <div className="partner-logo-one  pb-80 lg-pb-40 service-details">
             <div className="container">
                     <div className="title-one text-center mb-60 details-meta">
                         {/* <div className="upper-title"></div> */}
-                        <h2>In Collaboration With
+                        <h2>Our Client
                         </h2>
                     </div>
                 <Slider {...slider_setting} className="partner-slider-one">
