@@ -10,6 +10,7 @@ import FancyBannerThree from "@/components/fancy-banner/fancy-banner-three";
 import NewsletterBanner from "@/components/newsletter/newsletter-banner";
 import FooterOne from "@/layout/footer/footer-one";
 import BlogList from "@/components/dynamic/bloglist";
+import HeaderSix from "@/layout/header/header-six";
 
 export const metadata: Metadata = {
   title: "Blog Page",
@@ -20,18 +21,18 @@ const BlogPage = () => {
     <Wrapper>
       <div className="main-page-wrapper">
         {/* header start */}
-        <HeaderTwo />
+        {/* <HeaderTwo /> */}
+        <HeaderSix />
         {/* header end */}
         <main>
           {/* breadcrumb start */}
-          <BreadcrumbOne
+          {/* <BreadcrumbOne
             title="Our Blogs"
             subtitle=""
             page="Blog"
             bg_img={blog_bg}
             style_2={true}
-            // // shape={shape}
-          />
+          /> */}
           {/* breadcrumb end */}
 
           {/* blog list area start */}
@@ -40,7 +41,7 @@ const BlogPage = () => {
           {/* blog list area end */}
 
           {/* fancy banner three start */}
-          <FancyBannerThree />
+          {/* <FancyBannerThree /> */}
           {/* fancy banner three end */}
 
           {/* news letter start */}

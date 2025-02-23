@@ -8,15 +8,15 @@ const FancyBannerSix = () => {
         <div className="row">
           <div className="col-lg-8 col-md-9 m-auto">
             <h2 className="text-white fw-bold">
-              Apply for loan with low interest.
+              The Ultimate Smart Solar Hut
             </h2>
             <p className="text-white text-xl pt-10 pb-20">
-              Apply for loan & get up to $20million with low interest
+              Where comfort meets Sustainability & Connection 
             </p>
             <Link href="/contact"
               className="btn-seventeen d-inline-flex align-items-center tran3s"
             >
-              <span className="text">Get Started</span>
+              <span className="text">Connect Now</span>
               <i className="bi bi-arrow-right"></i>
             </Link>
           </div>

@@ -6,6 +6,8 @@ import FooterTwo from "@/layout/footer/footer-two";
 import FancyBannerThree from "@/components/fancy-banner/fancy-banner-three";
 import BreadcrumbTwo from "@/components/breadcrumb/breadcrumb-two";
 import ServiceTwoArea from "@/components/services/service-v2-area";
+import FooterOne from "@/layout/footer/footer-one";
+import HeaderSix from "@/layout/header/header-six";
 
 export const metadata: Metadata = {
   title: "Service v2 Page",
@@ -16,17 +18,17 @@ const ServiceTwoPage = () => {
     <Wrapper>
       <div className="main-page-wrapper">
         {/* header start */}
-        <HeaderOne />
+        <HeaderSix />
         {/* header end */}
         <main>
           {/* breadcrumb start */}
-          <BreadcrumbTwo
+          {/* <BreadcrumbTwo
             title="Our offerings & services"
             subtitle="Offering solutions & services to address a spectrum of financial issues"
             page="Services"
             style_4={true}
             col="col-xl-8 m-auto"
-          />
+          /> */}
           {/* breadcrumb end */}
 
           {/* service area start */}
@@ -34,12 +36,12 @@ const ServiceTwoPage = () => {
           {/* service area end */}
 
           {/* fancy banner three start */}
-          <FancyBannerThree />
+          {/* <FancyBannerThree /> */}
           {/* fancy banner three end */}
         </main>
 
         {/* footer start */}
-        <FooterTwo />
+        <FooterOne />
         {/* footer end */}
       </div>
     </Wrapper>

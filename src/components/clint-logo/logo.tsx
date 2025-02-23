@@ -5,11 +5,11 @@ import Slider from "react-slick";
 // import 'slick-carousel/slick/slick.css';
 // import 'slick-carousel/slick/slick-theme.css';
 
-import img1 from "@/assets/images/logo/clints/1.png"
-import img2 from "@/assets/images/logo/clints/2.png"
-import img3 from "@/assets/images/logo/clints/3.png"
-import img5 from "@/assets/images/logo/clints/hubdata.png"
-import img4 from "@/assets/images/logo/clints/4.png"
+import img1 from "@/assets/images/logo/clints/solar1.png"
+import img2 from "@/assets/images/logo/clints/solar2.png"
+import img3 from "@/assets/images/logo/clints/solar3.png"
+import img5 from "@/assets/images/logo/clints/soalr4.png"
+import img4 from "@/assets/images/logo/clints/soalr5.jpeg"
 
 
 
@@ -19,7 +19,7 @@ const slider_setting = {
   dots: false,
   arrows: false,
   centerPadding: "0px",
-  slidesToShow: 6,
+  slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
@@ -69,7 +69,7 @@ const slider_setting2 = {
   dots: false,
   arrows: false,
   centerPadding: "0px",
-  slidesToShow: 6,
+  slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
@@ -110,7 +110,7 @@ const slider_setting2 = {
   };
 
 // slider logos
-const slider_logos:StaticImageData[] = [img1, img2, img3, img5, img1, img2, img3, img2, img5,];
+const slider_logos:StaticImageData[] = [img1, img2, img3, img4, img5, img1, img2, img3, img2, img4, img5,];
 // const slider_logos2:StaticImageData[] = [img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23,];
 
 const ClintLogo = () => {

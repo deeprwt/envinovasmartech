@@ -24,6 +24,7 @@ import HowWeDo from "@/components/home-data/how-we-do";
 import logo_2 from "@/assets/images/logo/logome.png";
 import HeroVideoTwo from "@/components/hero-banner/hero-video-two";
 import FaqSolutionsThree from "@/components/faq/faq-section-three";
+import HeaderSix from "@/layout/header/header-six";
 
 export const metadata = {
   title: "About PiStar | Foot Scan with High-Accuracy Sensors",
@@ -48,7 +49,8 @@ const AboutUsPage = () => {
     <Wrapper>
       <div className="main-page-wrapper">
         {/* header start */}
-        <HeaderTwo />
+        {/* <HeaderTwo /> */}
+        <HeaderSix />
         {/* header end */}
         <main className="bgcolor2">
           {/* breadcrumb start */}

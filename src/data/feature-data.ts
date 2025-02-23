@@ -68,56 +68,56 @@ const feature_data:IService[] = [
   {
     id:1,
     icon:icon_1,
-    title:'Banking',
+    title:'SAFE CHARGING PORTS FOR MOBILE & LAPTOP',
     desc:'Effortless payments and transfers with our streamlined banking process.',
     page:'home'
   },
   {
     id:2,
     icon:icon_2,
-    title:'Earning',
+    title:'Wi-Fi',
     desc:'Earning potential grows with dedication, innovation, and continuous improvement.',
     page:'home'
   },
   {
     id:3,
     icon:icon_3,
-    title:'Expense Track',
+    title:'SENSOR BASED LED LIGHTS',
     desc:'Empower your budgeting with accurate and intuitive expense tracking',
     page:'home'
   },
   {
     id:4,
     icon:icon_4,
-    title:'Savings',
+    title:'360° CCTV SURVEILLANCE',
     desc:'Secure your dreams through disciplined savings & prudent investments.',
     page:'home'
   },
   {
     id:5,
     icon:icon_4,
-    title:'Savings',
+    title:'INFOTAINMENT SCREEN',
     desc:'Secure your dreams through disciplined savings & prudent investments.',
     page:'home'
   },
   {
     id:6,
     icon:icon_4,
-    title:'Savings',
+    title:'AUDIO SPEAKER for Announcements',
     desc:'Secure your dreams through disciplined savings & prudent investments.',
     page:'home'
   },
   {
     id:7,
     icon:icon_4,
-    title:'Savings',
+    title:'LIVE WEATHER MONITORING',
     desc:'Secure your dreams through disciplined savings & prudent investments.',
     page:'home'
   },
   {
     id:8,
     icon:icon_4,
-    title:'Savings',
+    title:'EMERGENCY SOS CALL',
     desc:'Secure your dreams through disciplined savings & prudent investments.',
     page:'home'
   },

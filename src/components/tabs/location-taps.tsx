@@ -23,7 +23,7 @@ function AddressBlock({
   icon: StaticImageData;
   title: string;
   subtitle: string;
-  para:string;
+  para: string;
 }) {
   return (
     <div className="address-block-one text-center mb-40">
@@ -72,8 +72,8 @@ const LocationTabsData = () => {
                     <AddressBlock
                       icon={icon_1}
                       title="Visit Us"
-                      subtitle="IIIT-H Foundation, Desk B70, Vindhya C5, IIIT-Hyd Campus, Survey#25, Gachibowli, Hyderabad, Rangareddi, Telangana, India, 500032"
-                      para="Hyderabad"
+                      subtitle="Cabin 1, E-313, Sector 75, Sahibzada Ajit Singh Nagar, Punjab 160055"
+                      para="Punjab"
                     />
                   </div>
                   <div className="col-md-4 pt-30 wow fadeInUp">
@@ -81,7 +81,7 @@ const LocationTabsData = () => {
                       icon={icon_2}
                       title="Call Us"
                       subtitle="Something important? We are just a call away! "
-                      para="+91 9908127810"
+                      para="+91 9872230560"
                     />
                   </div>
                   <div className="col-md-4 pt-30 wow fadeInUp">
@@ -90,7 +90,7 @@ const LocationTabsData = () => {
                       title="Contact Us "
                       subtitle="
                           If there is anything we can help you with just drop a mail at "
-                          para="info@pistar.tech"
+                      para="care@envinovasmartech.com"
                     />
                   </div>
 

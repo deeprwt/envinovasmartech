@@ -59,7 +59,7 @@ const AddNews = () => {
         const newsData = newsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as News));
         setNewsList(newsData);
       } catch (error) {
-        console.error("Error fetching news:", error);
+        console.error("Error fetching Project:", error);
       }
     };
 
@@ -111,17 +111,17 @@ const AddNews = () => {
         const docRef = doc(db, "news", currentNews.id);
         await updateDoc(docRef, newNews);
         setNewsList(newsList.map(n => (n.id === currentNews.id ? newNews : n)));
-        notifySuccess("News updated successfully!");
+        notifySuccess("Project updated successfully!");
       } else {
         const docRef = await addDoc(collection(db, "news"), newNews);
         setNewsList([...newsList, { id: docRef.id, ...newNews }]);
-        notifySuccess("News added successfully!");
+        notifySuccess("Project added successfully!");
       }
 
       resetForm();
     } catch (error) {
-      console.error("Error submitting news:", error);
-      notifyError("Failed to submit news");
+      console.error("Error submitting Project:", error);
+      notifyError("Failed to submit Project");
     }
   };
 
@@ -141,15 +141,15 @@ const AddNews = () => {
 
   const handleNewsDelete = async (id?: string) => {
     if (!id) return;
-    const isConfirmed = window.confirm("Are you sure you want to delete this article?");
+    const isConfirmed = window.confirm("Are you sure you want to delete this Project?");
   if (!isConfirmed) return;
     try {
       await deleteDoc(doc(db, "news", id));
       setNewsList(newsList.filter(news => news.id !== id));
-      notifySuccess("News deleted successfully!");
+      notifySuccess("Project deleted successfully!");
     } catch (error) {
-      console.error("Error deleting news:", error);
-      notifyError("Failed to delete news");
+      console.error("Error deleting Project:", error);
+      notifyError("Failed to delete Project");
     }
   };
 
@@ -208,7 +208,7 @@ const AddNews = () => {
                 <div className="row">
                   <div className="col-lg-12 col-md-12">
                     <div className="pt-45 pb-45 ps-xl-4 ps-lg-0 ps-3 pe-xl-4 pe-lg-3 pe-3 border-right h-100">
-                      <h2 className="name fw-bold m-0">{isEditing ? "Edit News" : "Add New News"}</h2>
+                      <h2 className="name fw-bold m-0">{isEditing ? "Edit Project" : "Add New Project"}</h2>
                       <form onSubmit={handleNewsSubmit}>
                         <div className="row">
                           <div className="col-md-6">
@@ -330,7 +330,7 @@ const AddNews = () => {
                         )}
                       </form>
                       <hr />
-                      <h3 className="text-center mt-60 mb-60">Existing News</h3>
+                      <h3 className="text-center mt-60 mb-60">Existing Project</h3>
                       <div className="row gx-xxl-5">
                         {currentItems.map(news => (
                           <div key={news.id} className="col-md-4">

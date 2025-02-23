@@ -250,7 +250,7 @@ const ProductDetailsArea = ({ product }: { product: IProduct }) => {
         </div>
 
         <div className="mt-80 lg-mt-50">
-          <ProductFeature />
+          {/* <ProductFeature /> */}
         </div>
       </div>
     </div>

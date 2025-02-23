@@ -10,6 +10,7 @@ import HeaderTwo from "@/layout/header/Header";
 import BreadcrumbOne from "@/components/breadcrumb/breadcrumb-one";
 import blog_bg from "@/assets/images/media/NewsBanner.png";
 import NewsList from "@/components/dynamic/newsdesigndata/newslist";
+import HeaderSix from "@/layout/header/header-six";
 
 export const metadata: Metadata = {
   title: "News & Media",
@@ -20,7 +21,8 @@ const BlogGridPage = () => {
     <Wrapper>
       <div className="main-page-wrapper">
         {/* header start */}
-        <HeaderTwo />
+        {/* <HeaderTwo /> */}
+        <HeaderSix />
         {/* header end */}
         <main>
           {/* breadcrumb start */}
@@ -39,7 +41,7 @@ const BlogGridPage = () => {
           {/* blog grid area end */}
 
           {/* fancy banner three start */}
-          <FancyBannerThree />
+          {/* <FancyBannerThree /> */}
           {/* fancy banner three end */}
         </main>
 

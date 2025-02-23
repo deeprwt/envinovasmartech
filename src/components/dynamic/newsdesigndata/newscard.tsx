@@ -32,13 +32,13 @@ const NewsCard: React.FC<NewsCardProps> = ({ news, onDelete, onEdit }) => {
         className="post-img position-relative d-flex align-items-end m0"
         style={{ backgroundImage: `url(${news.imageUrl || news.image})`, height: "252px" }}
       >
-        <Link href={`/news/${news.link}`} className="stretched-link date tran3s">
+        <Link href={`/projects/${news.link}`} className="stretched-link date tran3s">
           {news.date.split(" ")[0]} {news.date.split(" ")[1]}
         </Link>
       </figure>
       <div className="post-data">
         <div className="d-flex justify-content-between align-items-center flex-wrap">
-          <Link href={`/news/${news.link}`} className="blog-title">
+          <Link href={`/projects/${news.link}`} className="blog-title">
             <h4 style={{ fontSize: "23px" }}>{news.title}</h4>
           </Link>
           <div className="d-flex align-items-center">

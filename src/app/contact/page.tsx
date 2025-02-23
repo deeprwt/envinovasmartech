@@ -8,6 +8,7 @@ import FooterThree from "@/layout/footer/footer-three";
 import shape from "@/assets/images/shape/shape_33.svg";
 import NewsletterBanner from "@/components/newsletter/newsletter-banner";
 import FooterOne from "@/layout/footer/footer-one";
+import HeaderSix from "@/layout/header/header-six";
 
 export const metadata: Metadata = {
   title: "Contact Page",
@@ -18,16 +19,11 @@ const ContactPage = () => {
     <Wrapper>
       <div className="main-page-wrapper">
         {/* header start */}
-        <HeaderTwo />
+        {/* <HeaderTwo /> */}
+        <HeaderSix />
         {/* header end */}
         <main>
           {/* breadcrumb start */}
-          <BreadcrumbOne
-            title="Get in Touch"
-            subtitle="Reach Out to PiStarTech for Innovative Foot Care Solutions"
-            page="Contact Us"
-            // // shape={shape}
-          />
           {/* breadcrumb end */}
 
           {/* contact area start */}

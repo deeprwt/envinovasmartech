@@ -7,7 +7,7 @@ const UseSocialShare = () => {
     const share = usePathname();
 
     return(
-        <ul className="d-flex share-icon align-items-center style-none pt-20">
+        <ul className="d-flex share-icon align-items-center style-none pt-10">
         <li>Share:</li>
         <li>
           <Link href={`https://www.facebook.com/sharer/sharer.php?u=https://www.pistar.tech${share}`}>

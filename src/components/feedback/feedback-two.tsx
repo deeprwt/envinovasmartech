@@ -32,7 +32,7 @@ const slider_setting = {
 const FeedbackTwo = () => {
 
   return (
-   <div className="feedback-section-two position-relative mt-150 lg-mt-80">
+   <div className="feedback-section-two position-relative pt-150 lg-pt-80 pb-80">
 			<div className="container">
 				<div className="position-relative">
 					<div className="row">

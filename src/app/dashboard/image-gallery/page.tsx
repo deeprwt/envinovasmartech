@@ -92,7 +92,7 @@ const ImageGallery = () => {
                       onChange={(e) => setFolder(e.target.value)}
                     >
                       <option value="articleimages">Article Images</option>
-                      <option value="blogimages">Blog Images</option>
+                      <option value="productimages">Products Images</option>
                       <option value="newsimages">News Images</option>
                     </select>
                   </div>

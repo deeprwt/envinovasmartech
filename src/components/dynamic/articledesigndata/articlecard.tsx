@@ -34,31 +34,6 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   }
 
   return (
-    // <article className="blog-meta-two style-two mb-50 lg-mb-40">
-    //   <figure
-    //     className="post-img position-relative d-flex align-items-end m0"
-    //     style={{ backgroundImage: `url(${article.imageUrl || article.image})`, height: "252px" }}
-    //   >
-    //     <Link href={`/article/${article.link}`} className="stretched-link date tran3s">
-    //       {article.date.split(" ")[0]} {article.date.split(" ")[1]}
-    //     </Link>
-    //   </figure>
-    //   <div className="post-data">
-    //     <div className="d-flex justify-content-between align-items-center flex-wrap">
-    //       <Link href={`/article/${article.link}`} className="blog-title">
-    //         <h4 style={{ fontSize: "23px" }}>{article.title}</h4>
-    //       </Link>
-    //       <div className="d-flex align-items-center">
-    //         <button onClick={() => onEdit(article)} className="btn btn-primary me-2">
-    //           Edit
-    //         </button>
-    //         <button onClick={() => onDelete(article.id!)} className="btn btn-danger">
-    //           Delete
-    //         </button>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </article>
     <article className="blog-meta-two style-two mb-50 lg-mb-40">
       <figure
         className="post-img position-relative d-flex align-items-end m0"

@@ -69,7 +69,7 @@ const ImageUploadModal: React.FC<ImageUploadModalProps> = ({
                       onChange={(e) => setSelectedFolder(e.target.value)}
                     >
                       <option value="articleimages">Article Images</option>
-                      <option value="blogimages">Blog Images</option>
+                      <option value="productimages">Blog Images</option>
                       <option value="newsimages">News Images</option>
                     </select>
                   </div>
@@ -148,7 +148,7 @@ const ImageUploadModal: React.FC<ImageUploadModalProps> = ({
                   onChange={(e) => setSelectedFolder(e.target.value)}
                 >
                   <option value="articleimages">Article Images</option>
-                  <option value="blogimages">Blog Images</option>
+                  <option value="productimages">Blog Images</option>
                   <option value="newsimages">News Images</option>
                 </select>
               </div>

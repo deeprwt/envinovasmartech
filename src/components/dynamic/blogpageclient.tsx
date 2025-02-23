@@ -12,6 +12,7 @@ import FooterOne from "@/layout/footer/footer-one";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import HeaderSix from "@/layout/header/header-six";
+import Image, { StaticImageData } from "next/image";
 
 
 type Blog = {
@@ -22,6 +23,7 @@ type Blog = {
   title: string;
   author: string;
   post_info: string;
+  features:string;
   category: string;
   metaKeywords: string;
   metaDescription: string;
@@ -39,7 +41,7 @@ const BlogPageClient: React.FC<BlogPageClientProps> = ({ slug }) => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const q = query(collection(db, "blogs"), where("link", "==", slug));
+        const q = query(collection(db, "products"), where("link", "==", slug));
         const querySnapshot = await getDocs(q);
 
         if (!querySnapshot.empty) {
@@ -49,7 +51,7 @@ const BlogPageClient: React.FC<BlogPageClientProps> = ({ slug }) => {
           setBlog(null);
         }
       } catch (error) {
-        console.error("Error fetching blog:", error);
+        console.error("Error fetching products:", error);
       } finally {
         setLoading(false);
       }
@@ -73,7 +75,7 @@ const BlogPageClient: React.FC<BlogPageClientProps> = ({ slug }) => {
             blog ? (
               <BlogDetailsArea blog={blog} />
             ) : (
-              <div>No article found.</div>
+              <div>No Product found.</div>
             )
           )}
           {/* <BlogDetailsArea blog={blog} /> */}

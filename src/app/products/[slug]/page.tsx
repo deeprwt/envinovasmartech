@@ -11,6 +11,7 @@ type Blog = {
   title: string;
   author: string;
   post_info: string;
+  features: string;
   category: string;
   metaKeywords: string;
   metaDescription: string;
@@ -24,7 +25,7 @@ interface BlogPageProps {
 }
 
 const fetchBlog = async (slug: string): Promise<Blog | null> => {
-  const q = query(collection(db, "blogs"), where("link", "==", slug));
+  const q = query(collection(db, "products"), where("link", "==", slug));
   const querySnapshot = await getDocs(q);
 
   if (querySnapshot.empty) {
@@ -39,16 +40,16 @@ const BlogPage = async ({ params }: BlogPageProps) => {
   const blog = await fetchBlog(params.slug);
 
   if (!blog) {
-    return <div>No blog found.</div>;
+    return <div>No Products found.</div>;
   }
 
   return <BlogPageClient slug={params.slug} />;
 };
 
 export async function generateStaticParams() {
-  const blogsRef = collection(db, "blogs");
+  const blogsRef = collection(db, "products");
   const snapshot = await getDocs(blogsRef);
-  const paths = snapshot.docs.map(doc => ({
+  const paths = snapshot.docs.map((doc) => ({
     slug: doc.data().link,
   }));
 

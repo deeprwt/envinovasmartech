@@ -74,16 +74,10 @@ const BlogSidebar = () => {
     .slice(-2);
   return (
     <div className="blog-sidebar md-mt-60 ps-xxl-4">
-      <form action="#" className="sidebar-search">
-        <input type="text" placeholder="Search.." />
-        <button className="tran3s">
-          <i className="bi bi-search"></i>
-        </button>
-      </form> 
-      <div className="blog-recent-news mt-60 lg-mt-40">
-        <h3 className="sidebar-title">Recent Blogs</h3>
+      <div className="blog-recent-news lg-mt-40">
+        <h3 className="sidebar-title">Recent Article</h3>
         {loading ? (
-              Array.from({ length: 9 }).map((_, index) => (
+              Array.from({ length: 3 }).map((_, index) => (
                 <div key={index} className="mb-5">
                   <Skeleton height={250} />
                   <Skeleton count={3} />
@@ -112,21 +106,6 @@ const BlogSidebar = () => {
             </div>
           </article>
         ))} */}
-      </div>
-      <div className="blog-category mt-60 lg-mt-40">
-        <h3 className="sidebar-title">Blog Category</h3>
-        <ul className="style-none">
-          <li>
-            <Link href="#">
-              Sustainability <span>( {sustainabilityDataCount} )</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="#">
-              IT <span>( {itDataCount} )</span>
-            </Link>
-          </li>
-        </ul>
       </div>
 
       {/* <div className="blog-keyword mt-60 lg-mt-40">

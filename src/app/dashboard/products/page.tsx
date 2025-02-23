@@ -27,6 +27,7 @@ type Blog = {
   title: string;
   author: string;
   post_info: string;
+  features:string;
   category: string;
   metaKeywords: string;
   metaDescription: string;
@@ -42,6 +43,7 @@ const AddBlog = () => {
     title: "",
     author: "",
     post_info: "",
+    features:"",
     category: "",
     metaKeywords: "",
     metaDescription: "",
@@ -55,7 +57,7 @@ const AddBlog = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const blogsSnapshot = await getDocs(collection(db, "blogs"));
+        const blogsSnapshot = await getDocs(collection(db, "products"));
         const blogsData = blogsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Blog));
         setBlogs(blogsData);
       } catch (error) {
@@ -78,7 +80,7 @@ const AddBlog = () => {
     let counter = 1;
 
     while (true) {
-      const q = query(collection(db, "blogs"), where("link", "==", slug));
+      const q = query(collection(db, "products"), where("link", "==", slug));
       const querySnapshot = await getDocs(q);
 
       if (querySnapshot.empty) {
@@ -114,26 +116,26 @@ const AddBlog = () => {
       };
 
       if (isEditing && currentBlog?.id) {
-        const docRef = doc(db, "blogs", currentBlog.id);
+        const docRef = doc(db, "products", currentBlog.id);
         await updateDoc(docRef, newBlog);
         setBlogs(blogs.map(b => (b.id === currentBlog.id ? newBlog : b)));
-        notifySuccess("Blog updated successfully!");
+        notifySuccess("Product updated successfully!");
       } else {
-        const docRef = await addDoc(collection(db, "blogs"), newBlog);
+        const docRef = await addDoc(collection(db, "products"), newBlog);
         setBlogs([...blogs, { id: docRef.id, ...newBlog }]);
-        notifySuccess("Blog added successfully!");
+        notifySuccess("Product added successfully!");
       }
 
       resetForm();
     } catch (error) {
-      console.error("Error submitting blog:", error);
-      notifyError("Failed to submit blog");
+      console.error("Error submitting product:", error);
+      notifyError("Failed to submit product");
     }
   };
 
   const uploadImage = async (): Promise<string | undefined> => {
     if (!imageUpload) return undefined;
-    const imageRef = ref(storage, `blogimages/${imageUpload.name}_${Date.now()}`);
+    const imageRef = ref(storage, `productimages/${imageUpload.name}_${Date.now()}`);
     try {
       const snapshot = await uploadBytes(imageRef, imageUpload);
       const downloadURL = await getDownloadURL(snapshot.ref);
@@ -150,7 +152,7 @@ const AddBlog = () => {
     const isConfirmed = window.confirm("Are you sure you want to delete this article?");
   if (!isConfirmed) return;
     try {
-      await deleteDoc(doc(db, "blogs", id));
+      await deleteDoc(doc(db, "products", id));
       setBlogs(blogs.filter(blog => blog.id !== id));
       notifySuccess("Blog deleted successfully!");
     } catch (error) {
@@ -167,6 +169,7 @@ const AddBlog = () => {
       title: "",
       author: "",
       post_info: "",
+      features:"",
       category: "",
       metaKeywords: "",
       metaDescription: "",
@@ -203,6 +206,14 @@ const AddBlog = () => {
       []
     );
 
+        // Debounce the handleQuillChange function to reduce re-renders
+        const handleQuillChangefeatures = useCallback(
+          debounce((content: string) => {
+            setBlog((prevBlog) => ({ ...prevBlog, features: content }));
+          }, 300),
+          []
+        );
+
   return (
     <Wrapper>
       <div className="main-page-wrapper">
@@ -214,7 +225,7 @@ const AddBlog = () => {
                 <div className="row">
                   <div className="col-lg-12 col-md-12">
                     <div className="pt-45 pb-45 ps-xl-4 ps-lg-0 ps-3 pe-xl-4 pe-lg-3 pe-3 border-right h-100">
-                      <h2 className="name fw-bold m-0">{isEditing ? "Edit Blog" : "Add New Blog"}</h2>
+                      <h2 className="name fw-bold m-0">{isEditing ? "Edit Products" : "Add New Products"}</h2>
                       <form onSubmit={handleBlogSubmit}>
                         <div className="row">
                           <div className="col-md-6 mb-3">
@@ -306,6 +317,14 @@ const AddBlog = () => {
                                 onChange={(e) => setBlog({ ...blog, metaDescription: e.target.value })}
                               />
                             </div>
+                          </div>
+                          <div className="col-md-12 mb-3">
+                            <label htmlFor="features" className="form-label">short description</label>
+                            <ReactQuill
+                              theme="snow"
+                              value={blog.features}
+                              onChange={handleQuillChangefeatures}
+                            />
                           </div>
                           <div className="col-md-12 mb-3">
                             <label htmlFor="post_info" className="form-label">Post Information</label>

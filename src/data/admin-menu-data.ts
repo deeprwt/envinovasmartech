@@ -14,21 +14,21 @@ const admin_menu_data: IMenu[] = [
   {
     id: 4,
     link: "#",
-    title: "Blogs",
+    title: "Products",
     sub_dropdown: true,
     dropdown_submenus: [
-      { link: "/dashboard/blog", title: "Create New Blogs" },
-      { link: "/blog", title: "Your Blogs" },
+      { link: "/dashboard/products", title: "Add New Products" },
+      { link: "/products", title: "Your Proudcts" },
     ],
   },
   {
     id: 5,
     link: "#",
-    title: "News",
+    title: "Projects",
     sub_dropdown: true,
     dropdown_submenus: [
-      { link: "/dashboard/news", title: "Create New News" },
-      { link: "/news", title: "Your News" },
+      { link: "/dashboard/projects", title: "Add New Projects" },
+      { link: "/projects", title: "Your projects" },
     ],
   },
   {

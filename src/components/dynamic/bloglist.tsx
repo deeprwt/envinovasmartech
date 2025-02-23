@@ -17,6 +17,7 @@ type Blog = {
   title: string;
   author: string;
   post_info: string;
+  features:string;
   category: string;
   metaKeywords: string;
   metaDescription: string;
@@ -30,7 +31,7 @@ const BlogList = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const blogsSnapshot = await getDocs(collection(db, "blogs"));
+        const blogsSnapshot = await getDocs(collection(db, "products"));
         const blogsData = blogsSnapshot.docs.map(
           (doc) => ({ id: doc.id, ...doc.data() } as Blog)
         );
@@ -63,7 +64,7 @@ const BlogList = () => {
     <div className="blog-section-six position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
       <div className="container">
         <div className="row gx-xl-5">
-          <div className="col-lg-8">
+          <div className="col-lg-12">
             {loading ? (
               Array.from({ length: 3 }).map((_, index) => (
                 <div key={index} className="mb-5">
@@ -72,8 +73,8 @@ const BlogList = () => {
                 </div>
               ))
             ) : (
-              currentItems.map((blog) => (
-                <div key={blog.id} className="">
+              currentItems.map((blog,i) => (
+                <div key={blog.id} className="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay={`0.${i}s`} >
                   <BlogWebsiteCard blog={blog} />
                 </div>
               ))
@@ -83,9 +84,6 @@ const BlogList = () => {
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-8">
-            <BlogSidebar />
-          </div>
         </div>
       </div>
     </div>

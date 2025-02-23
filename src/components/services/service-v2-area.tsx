@@ -12,15 +12,15 @@ const ServiceTwoArea = () => {
       {/* block feature end */}
 
       {/* block feature six start */}
-      <BlockFeatureSix style_2={true} />
+      {/* <BlockFeatureSix style_2={true} /> */}
       {/* block feature six end */}
 
       {/* fancy banner start */}
-      <FancyBannerSix />
+      {/* <FancyBannerSix /> */}
       {/* fancy banner end */}
 
       {/* feedback section start */}
-      <FeedbackFour spacing="mt-150 lg-mt-80" />
+      {/* <FeedbackFour spacing="mt-150 lg-mt-80" /> */}
       {/* feedback section end */}
     </>
   );
