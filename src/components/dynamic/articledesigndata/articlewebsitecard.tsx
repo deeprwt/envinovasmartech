@@ -38,8 +38,8 @@ const ArticleWebsiteCard: React.FC<ArticleCardProps> = ({ article }) => {
       />
       <div className="post-data">
         <div className="d-flex justify-content-center align-items-center flex-wrap">
-          <Link href={`/article/${article.link}`} className="blog-title text-align-center">
-            <h4 style={{ fontSize: "23px" }} className="text-align-center">{article.title}</h4>
+          <Link href={`/article/${article.link}`} className="blog-title">
+            <h4 style={{ fontSize: "23px" }} className="text-center">{article.title}</h4>
           </Link>
         </div>
         <p>{limitedText}</p>

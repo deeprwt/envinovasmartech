@@ -110,6 +110,8 @@ export default function HomePage() {
 
           {/* <PopUpModal /> */}
 
+          
+
         </main>
 
         {/* footer start */}

@@ -40,7 +40,7 @@ const slider_setting = {
 
 const HeroBannerEight = () => {
   return (
-    <div className="hero-banner-one vh-90 pt-225 xl-pt-200 lg-pt-150 pb-150 lg-pb-100 position-relative vh-100">
+    <div className="hero-banner-one vh-90 pt-225 xl-pt-200 lg-pt-150 pb-150 lg-pb-100 position-relative vh-100 d-flex justify-content-center">
       <Slider {...slider_setting} className="hero-slider-one m0">
         {slider_bg.map((bg, i) => (
           <div className="item m0" key={i}>
@@ -78,10 +78,10 @@ const HeroBannerEight = () => {
                 technology”
               </p>
               <div className="d-inline-flex flex-wrap align-items-center">
-                <Link href="/about-us" className="btn-one mt-15 me-4">
+                <Link href="/contact" className="btn-one mt-15 me-4">
                   Contact Us
                 </Link>
-                <Link href="/about-us" className="btn-one mt-15 me-4">
+                <Link href="/product" className="btn-one mt-15 me-4">
                   Product
                 </Link>
               </div>
