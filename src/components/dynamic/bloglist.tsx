@@ -57,7 +57,7 @@ const BlogList = () => {
 
   const { currentItems, handlePageClick, pageCount } = usePagination<Blog>(
     sortedBlogs,
-    3
+    9
   );
 
   return (
@@ -66,7 +66,7 @@ const BlogList = () => {
         <div className="row gx-xl-5">
           <div className="row">
             {loading ? (
-              Array.from({ length: 3 }).map((_, index) => (
+              Array.from({ length: 9 }).map((_, index) => (
                 <div key={index} className="mb-5">
                   <Skeleton height={250} />
                   <Skeleton count={3} />

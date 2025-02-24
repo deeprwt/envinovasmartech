@@ -44,7 +44,7 @@ const ArticlePage = () => {
           <ArticleList />
 
           {/* fancy banner three start */}
-          <FancyBannerThree />
+          {/* <FancyBannerThree /> */}
           {/* fancy banner three end */}
 
           {/* news letter start */}

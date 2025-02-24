@@ -67,7 +67,7 @@ const NewsList = () => {
               Array.from({ length: 4 }).map((_, index) => (
                 <div key={index} className="col-md-6 mb-5">
                   <Skeleton height={250} />
-                  <Skeleton count={3} />
+                  <Skeleton count={2} />
                 </div>
               ))
             ) : (

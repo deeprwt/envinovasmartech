@@ -71,7 +71,7 @@ const ArticleList = () => {
               Array.from({ length: 9 }).map((_, index) => (
                 <div key={index} className="col-md-4 mb-5">
                   <Skeleton height={250} />
-                  <Skeleton count={3} />
+                  <Skeleton count={1} />
                 </div>
               ))
             ) : (
