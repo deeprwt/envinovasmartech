@@ -30,17 +30,22 @@ const NewsWebsiteCard: React.FC<NewsCardProps> = ({ news }) => {
       </figure>
       <div className="post-data">
         {/* <div className="post-info">{news.category}</div> */}
-        <div className="d-flex justify-content-between align-items-center flex-wrap">
-          <Link href={`/projects/${news.link}`} className="blog-title">
+        <div className="d-flex justify-content-center align-items-center flex-wrap">
+          {/* <Link href={`/projects/${news.link}`} className="blog-title">
             <h4 style={{ fontSize: "23px" }}>{news.title}</h4>
-          </Link>
+          </Link> */}
           <Link href={`/projects/${news.link}`}
+            className="btn-one tran3s"
+          >
+           View Details...
+          </Link>
+          {/* <Link href={`/projects/${news.link}`}
             className="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"
           >
             <i className="bi bi-arrow-up-right"></i>
-          </Link>
+          </Link> */}
         </div>
-        <div className="post-info">{news.category}</div>
+        {/* <div className="post-info">{news.category}</div> */}
       </div>
     </article>
   );

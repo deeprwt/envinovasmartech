@@ -66,7 +66,7 @@ const ArticleList = () => {
     <div className="blog-section-two position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
       <div className="container">
         <div className="position-relative">
-          <div className="row gx-xxl-5">
+          <div className="row gx-xxl-5 m-auto justify-content-center">
             {loading ? (
               Array.from({ length: 9 }).map((_, index) => (
                 <div key={index} className="col-md-4 mb-5">
@@ -76,7 +76,7 @@ const ArticleList = () => {
               ))
             ) : (
               currentItems.map((article) => (
-                <div key={article.id} className="col-md-4">
+                <div key={article.id} className="col-md-10">
                   <ArticleWebsiteCard article={article} />
                 </div>
               ))

@@ -20,6 +20,8 @@ type BlogCardProps = {
 // img style
 const imgStyle = {
   height: "auto",
+  border: "3px solid #233650",
+  borderRadius: "15px"
 };
 
 const BlogWebsiteCard: React.FC<BlogCardProps> = ({ blog }) => {
@@ -61,11 +63,13 @@ const BlogWebsiteCard: React.FC<BlogCardProps> = ({ blog }) => {
               style={imgStyle}
             />
           </Link>
-          <Link href={`/products/${blog.link}`} className="cart-button active">
-            View Product
+           <div className="">
+           <Link href={`/products/${blog.link}`} className="cart-button">
+            View Now
           </Link>
+           </div>
         </div>
-        <div className="product-meta">
+        {/* <div className="product-meta">
           <div className="d-lg-flex align-items-center justify-content-between">
             <Link href={`/products/${blog.link}`} className="product-title">
               {blog.title}
@@ -88,7 +92,7 @@ const BlogWebsiteCard: React.FC<BlogCardProps> = ({ blog }) => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

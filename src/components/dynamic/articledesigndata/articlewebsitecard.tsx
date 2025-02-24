@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 type ArticleCardProps = {
   article: {
@@ -15,27 +16,39 @@ type ArticleCardProps = {
   };
 };
 
+const extractTextWithLimit = (html: string, wordLimit = 30) => {
+  if (!html) return "";
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const textContent = doc.body.textContent || "";
+  return textContent.split(/\s+/).slice(0, wordLimit).join(" ") + "...";
+};
+
 const ArticleWebsiteCard: React.FC<ArticleCardProps> = ({ article }) => {
+  const limitedText = extractTextWithLimit(article.post_info, 30);
+
   return (
     <article className="blog-meta-two style-two mb-50 lg-mb-40">
-      <figure
-        className="post-img position-relative d-flex align-items-end m0"
-        style={{ backgroundImage: `url(${article.imageUrl || article.image})`, height: "252px" }}
-      >
-        <Link href={`/article/${article.link}`} className="stretched-link date tran3s">
-          {article.date.split(" ")[0]} {article.date.split(" ")[1]}
-        </Link>
-      </figure>
+      <Image
+        src={article.imageUrl || article.image}
+        alt="icon"
+        layout="responsive"
+        width={500}
+        height={500}
+        className="lazy-img me-auto ms-auto"
+      />
       <div className="post-data">
-        <div className="post-info">{article.category}</div>
-        <div className="d-flex justify-content-between align-items-center flex-wrap">
-          <Link href={`/article/${article.link}`} className="blog-title">
-            <h4 style={{ fontSize: "23px" }}>{article.title}</h4>
-          </Link>
-          <Link href={`/article/${article.link}`} className="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
-            <i className="bi bi-arrow-up-right"></i>
+        <div className="d-flex justify-content-center align-items-center flex-wrap">
+          <Link href={`/article/${article.link}`} className="blog-title text-align-center">
+            <h4 style={{ fontSize: "23px" }} className="text-align-center">{article.title}</h4>
           </Link>
         </div>
+        <p>{limitedText}</p>
+        <Link
+          href={`/article/${article.link}`}
+          className="btn-three d-flex align-items-center justify-content-center tran3s"
+        >
+          Read More..
+        </Link>
       </div>
     </article>
   );

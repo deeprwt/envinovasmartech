@@ -64,7 +64,7 @@ const BlogList = () => {
     <div className="blog-section-six position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
       <div className="container">
         <div className="row gx-xl-5">
-          <div className="col-lg-12">
+          <div className="row">
             {loading ? (
               Array.from({ length: 3 }).map((_, index) => (
                 <div key={index} className="mb-5">
@@ -74,7 +74,7 @@ const BlogList = () => {
               ))
             ) : (
               currentItems.map((blog,i) => (
-                <div key={blog.id} className="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay={`0.${i}s`} >
+                <div key={blog.id} className="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay={`0.${i}s`} >
                   <BlogWebsiteCard blog={blog} />
                 </div>
               ))

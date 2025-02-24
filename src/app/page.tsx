@@ -101,79 +101,15 @@ export default function HomePage() {
 
           <HomeTwoBlogs />
 
-          {/* <StaffingSolutions /> */}
-          {/* <TeamThreeArea /> */}
-
-          {/* feedback one start */}
-          {/* back to deepak accont */}
-          {/* <FeedbackOne /> */}
-          {/* feedback one end */}
-
-          {/* <TextFeatureSeven /> */}
-
-          {/* number counter start  */}
-          {/* <TextFeatureHome style_2={true} /> */}
-          {/* number counter end */}
-
-          {/* clints logo start  */}
-          {/* <ClintLogo /> */}
-          {/* clints logo start  */}
-
-          {/* partner logos start  */}
-          {/* <PartnersLogos /> */}
-          {/* partner logos end  */}
           <FeedbackTwo />
 
           {/* <BlockFeatureSeven /> */}
           <PortfolioTwo />
           {/* blog item end */}
-          <TextFeatureTen />
           {/* <AwardsSection /> */}
 
           {/* <PopUpModal /> */}
 
-          <div
-            className="contact-us-section pt-80 lg-pt-80"
-            style={backImg2}
-            // style={{background:"#292e31"}}
-          >
-            <div className="container">
-              <div className="position-relative">
-                <div className="bg-wrapper lg-mt-40">
-                  <div className="row">
-                    <div className="col-lg-5 d-flex">
-                      {/* <Image
-                        src={img4}
-                        alt="icon"
-                        layout="responsive"
-                        className=""
-                      /> */}
-                      <div className="ms-auto pe-xxl-5 ps-xxl-5 pb-35 md-mt-60 d-flex align-items-end">
-                        <Image
-                          src={img4}
-                          alt="cgb aboutus"
-                          className="shap-animate rounded"
-                          style={{ height: "auto" }}
-                        ></Image>
-                        {/* <ul className="style-none">
-                        <li>Mobile app easy management & access</li>
-                        <li>Ton’s of features for handle the card easily</li>
-                        <li>Strong security system.</li>
-                    </ul> */}
-                      </div>
-                    </div>
-                    <div className="col-lg-7">
-                      <div className="form-style-one ps-xl-5">
-                        {/* form start */}
-                        <ContactForm />
-                        {/* form end */}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </main>
 
         {/* footer start */}

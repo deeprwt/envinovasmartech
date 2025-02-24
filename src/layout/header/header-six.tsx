@@ -20,11 +20,11 @@ const HeaderSix = () => {
       >
         <div className="inner-content">
           <div className="top-header position-relative">
-            <div className="d-flex align-items-center justify-content-center">
+            <div className="d-flex align-items-center justify-content-lg-center  justify-content-between">
               <div className="logo order-lg-0">
                 <Link
                   href="/"
-                  className="d-flex  d-block d-md-none align-items-center"
+                  className="d-flex  d-block d-lg-none align-items-center"
                 >
                   <Image width={110} src={logo} alt="Cgb logo" />
                 </Link>

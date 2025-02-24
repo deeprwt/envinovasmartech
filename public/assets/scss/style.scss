@@ -222,6 +222,18 @@ thead, tbody, tfoot, tr, td, th {
 .slick-initialized .slick-slide{
     padding: 0px 20px;
 }
+
+.whatsapp {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 74px;
+    right: 2px;
+    z-index: 99;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3sease -in-out;
+}
 //-----Manish----
 
 .bgnew{

@@ -15,8 +15,8 @@ import NewsletterBannerTwo from "@/components/newsletter/newsletter-banner-2";
 const FooterOne = () => {
   return (
     <>
-      <NewsletterBannerTwo />
-      <div className="footer-one" style={{ background: "#0c3a30" }}>
+      {/* <NewsletterBannerTwo /> */}
+      <div className="footer-one" style={{ background: "radial-gradient(56.79% 56.79% at 50% 50%, rgb(139, 242, 161) 0%, rgb(83, 188, 105) 0%, rgb(10, 116, 95) 100%)" }}>
         <div className="container">
           <div className="inner-wrapper">
             <div className="row justify-content-between">
@@ -66,22 +66,22 @@ const FooterOne = () => {
                 <h5 className="footer-title">Solutions</h5>
                 <ul className="footer-nav-link style-none">
                   <li>
-                    <Link href="/">Foot Systems Podiatry</Link>
+                    <Link href="/">Product 1</Link>
                   </li>
                   <li>
-                    <Link href="/product/podiascanner">Podiascanner Mat</Link>
+                    <Link href="/product/podiascanner">Product 2</Link>
                   </li>
                   <li>
                     <Link href="/product/footscan">
-                      Foot Scan With Podiascan
+                      Product 3
                     </Link>
                   </li>
                   <li>
-                    <Link href="/product/pressure-mat">Pressure Mat</Link>
+                    <Link href="/product/pressure-mat">Product 4</Link>
                   </li>
                   <li>
                     <Link href="/product/foot-pressure-mapping">
-                      Foot Pressure Mapping
+                     Product 5
                     </Link>
                   </li>
                 </ul>
@@ -110,7 +110,7 @@ const FooterOne = () => {
                 <h5 className="footer-title">Get In Touch</h5>
                 <ul className="footer-nav-link style-none">
                   <li>
-                    <Link href="mailto:info@pistar.tech">info@pistar.tech</Link>
+                    <Link href="mailto:info@pistar.tech">care@envinovasmartech.com</Link>
                   </li>
                   <li>
                     <Link href="tel:9908127810">+91 9908127810</Link>

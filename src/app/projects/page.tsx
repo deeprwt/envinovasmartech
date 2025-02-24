@@ -26,13 +26,13 @@ const BlogGridPage = () => {
         {/* header end */}
         <main>
           {/* breadcrumb start */}
-          <BreadcrumbOne 
+          {/* <BreadcrumbOne 
           title="News & Media"
           subtitle=""
           page="News & Media"
           bg_img={blog_bg}
           style_2={true}
-          />
+          /> */}
           {/* breadcrumb end */}
 
           {/* blog grid area start */}

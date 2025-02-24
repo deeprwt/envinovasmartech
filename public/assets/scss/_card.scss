@@ -142,7 +142,8 @@
     .icon {
         width: 70px;
         height: 70px;
-        background: #FFE86B;
+        // background: #FFE86B;
+        background: radial-gradient(56.79% 56.79% at 50% 50%, rgb(139, 242, 161) 0%, rgb(83, 188, 105) 54.01%, rgb(10, 116, 95) 100%);
     }
     p {
         font-size: 18px;
@@ -383,7 +384,8 @@
     .icon {
         width: 60px;
         height: 60px;
-        background: $color-one;
+        // background: $color-one;
+        background: radial-gradient(56.79% 56.79% at 50% 50%, rgb(139, 242, 161) 0%, rgb(83, 188, 105) 54.01%, rgb(10, 116, 95) 100%);
     }
     .text {
         width: calc(100% - 60px);

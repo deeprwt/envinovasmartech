@@ -13,6 +13,7 @@ import { db } from "@/database/firebase";
 import UseSocialShare from "@/components/socail-media/socialshare";
 import BlogSidebar from "@/components/blogs/blog-sidebar";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Blog = {
   id?: string;
@@ -95,6 +96,15 @@ const BlogDetailsArea: React.FC<{ blog: Blog }> = ({ blog }) => {
                 <div className="pt-20">
                   <div dangerouslySetInnerHTML={{ __html: blog.features }} />
                 </div>
+                <div className="button-group mt-30 d-sm-flex align-items-center">
+                  <Link
+                    href="/contact"
+                    type="button"
+                    className="btn-six mt-15 d-block"
+                  >
+                    Buy Now
+                  </Link>
+                </div>
                 <div className="bottom-widget d-sm-flex align-items-center justify-content-between">
                   <UseSocialShare />
                 </div>
@@ -117,32 +127,6 @@ const BlogDetailsArea: React.FC<{ blog: Blog }> = ({ blog }) => {
                   Description
                 </button>
               </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  data-bs-toggle="tab"
-                  data-bs-target="#item2"
-                  type="button"
-                  role="tab"
-                  aria-selected="false"
-                  tabIndex={-1}
-                >
-                  Technical Info
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  data-bs-toggle="tab"
-                  data-bs-target="#item3"
-                  type="button"
-                  role="tab"
-                  aria-selected="false"
-                  tabIndex={-1}
-                >
-                  Feedback
-                </button>
-              </li>
             </ul>
             <div className="tab-content mt-50 lg-mt-20">
               <div
@@ -152,48 +136,6 @@ const BlogDetailsArea: React.FC<{ blog: Blog }> = ({ blog }) => {
               >
                 <div className="row gx-5">
                   <div dangerouslySetInnerHTML={{ __html: blog.post_info }} />
-                </div>
-              </div>
-              <div className="tab-pane fade" id="item2" role="tabpanel">
-                <div className="row gx-5">
-                  <div dangerouslySetInnerHTML={{ __html: blog.post_info }} />
-                </div>
-              </div>
-              <div className="tab-pane fade" id="item3" role="tabpanel">
-                <div className="row">
-                  <div className="col-xl-10">
-                    <div className="user-comment-area">
-                      {/* {reviews.map((r, i) => (
-                        <div
-                          key={i}
-                          className="single-comment d-flex align-items-top"
-                        >
-                          <Image src={r.user} alt="user" className="user-img" />
-                          <div className="user-comment-data">
-                            <h6 className="name">{r.name}</h6>
-                            <ul className="style-none d-flex rating">
-                              <li>
-                                <i className="bi bi-star-fill"></i>
-                              </li>
-                              <li>
-                                <i className="bi bi-star-fill"></i>
-                              </li>
-                              <li>
-                                <i className="bi bi-star-fill"></i>
-                              </li>
-                              <li>
-                                <i className="bi bi-star-fill"></i>
-                              </li>
-                              <li>
-                                <i className="bi bi-star"></i>
-                              </li>
-                            </ul>
-                            <p>{r.review_text}</p>
-                          </div>
-                        </div>
-                      ))} */}
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

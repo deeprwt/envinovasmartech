@@ -20,6 +20,7 @@
         background: #F5F5F5;
         z-index: 5;
         margin-bottom: 22px;
+        border-radius: 15px;
         .cart-icon {
             display: block;
             width: 35px;
@@ -54,11 +55,13 @@
             left: 20px;
             right: 20px;
             bottom: 20px;
-            line-height: 48px;
+            // line-height: 48px;
+            width: max-content;
+            padding: 10px;
             background: $color-two;
             text-align: center;
             color: #fff;
-            opacity: 0;
+            // opacity: 0;
             transform: translateY(10px);
             @include transition(0.4s);
             &:hover {

@@ -181,7 +181,7 @@ const Navbar = ({ logo_white = false }: { logo_white?: boolean }) => {
         </li>
       ))}
               {/* Center Logo */}
-              <div className="logo-container d-flex d-none d-md-block justify-content-center">
+              <div className="logo-container d-flex d-none d-lg-block justify-content-center">
           <Link href="/" className="d-block">
             <Image
               width="165"
@@ -357,7 +357,7 @@ const Navbar = ({ logo_white = false }: { logo_white?: boolean }) => {
           </div>
         </a> */}
         <ul className="style-none contact-info m0 pt-30">
-          <li className="d-md-block">
+          {/* <li className="d-md-block">
             <a
               href="#"
               data-bs-toggle="modal"
@@ -367,7 +367,7 @@ const Navbar = ({ logo_white = false }: { logo_white?: boolean }) => {
             >
               Book a Demo
             </a>
-          </li>
+          </li> */}
 
           {/* <li className="d-flex align-items-center p0 mt-15">
             <Image src={icon_1} alt="icon" className="lazy-img icon me-2" />

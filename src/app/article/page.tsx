@@ -11,6 +11,7 @@ import NewsletterBanner from "@/components/newsletter/newsletter-banner";
 import FooterOne from "@/layout/footer/footer-one";
 import BlogList from "@/components/dynamic/bloglist";
 import ArticleList from "@/components/dynamic/articledesigndata/articlelist";
+import HeaderSix from "@/layout/header/header-six";
 
 export const metadata: Metadata = {
   title: "Article",
@@ -21,18 +22,19 @@ const ArticlePage = () => {
     <Wrapper>
       <div className="main-page-wrapper">
         {/* header start */}
-        <HeaderTwo />
+        {/* <HeaderTwo /> */}
+        <HeaderSix />
         {/* header end */}
         <main>
           {/* breadcrumb start */}
-          <BreadcrumbOne
+          {/* <BreadcrumbOne
             title="Our Article"
             subtitle="Innovative Flexible Pressure Sensors for Smart Solutions"
             page="Article"
             bg_img={blog_bg}
             style_2={true}
             // // shape={shape}
-          />
+          /> */}
           {/* breadcrumb end */}
 
           {/* blog list area start */}

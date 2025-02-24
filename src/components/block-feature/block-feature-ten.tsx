@@ -8,9 +8,22 @@ import icon_4 from "@/assets/images/icon/icon_65.svg";
 import icon_5 from "@/assets/images/icon/icon_66.svg";
 import icon_6 from "@/assets/images/icon/icon_67.svg";
 import shape from "@/assets/images/shape/shape_05.svg";
+import feature_data from "@/data/feature-data";
+import arrow from "@/assets/images/icon/icon_09.svg";
+import icon from "@/assets/images/icon/icon_27.svg";
+import Link from "next/link";
+// import shape from "@/assets/images/shape/shape_06.svg";
 
 // card item
-function CardItem({icon,title,subtitle}:{icon:StaticImageData;title:string;subtitle:string}) {
+function CardItem({
+  icon,
+  title,
+  subtitle,
+}: {
+  icon: StaticImageData;
+  title: string;
+  subtitle: string;
+}) {
   return (
     <div className="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
       <div className="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
@@ -25,13 +38,14 @@ function CardItem({icon,title,subtitle}:{icon:StaticImageData;title:string;subti
 }
 
 const BlockFeatureTen = () => {
+  const service_items = feature_data.filter((s) => s.page === "home");
   return (
     <div className="block-feature-ten position-relative mt-150 lg-mt-80 pb-100 lg-pb-60">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-8 wow fadeInUp">
             <div className="title-one mb-50 lg-mb-20">
-              <h2>Complete Banking solution with great Facility.</h2>
+              <h2>Features</h2>
             </div>
           </div>
         </div>
@@ -44,53 +58,23 @@ const BlockFeatureTen = () => {
                 subtitle="Effortless payments and transfers with our streamlined banking process."
               />
             </div>
-            <div
-              className="col-xl-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <CardItem
-                icon={icon_2}
-                title="Loan Facility"
-                subtitle="Earning potential grows with dedication, innovation, & with our instruction from expert."
-              />
-            </div>
-            <div
-              className="col-xl-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.2s"
-            >
-              <CardItem
-                icon={icon_3}
-                title="Expense Track"
-                subtitle="Strengthen budgeting through precise and instinctive monitoring of your expenses."
-              />
-            </div>
-            <div className="col-xl-4 col-md-6 wow fadeInUp">
-              <CardItem
-                icon={icon_4}
-                title="DPS & FDR"
-                subtitle="Achieve lasting dreams through disciplined savings & a thoughtful investment approach."
-              />
-            </div>
-            <div
-              className="col-xl-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <CardItem
-                icon={icon_5}
-                title="International Account"
-                subtitle="Achieve lasting dreams through disciplined savings and a thoughtful investment approach."
-              />
-            </div>
-            <div
-              className="col-xl-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.2s"
-            >
-              <CardItem
-                icon={icon_6}
-                title="Credit Card"
-                subtitle="Strengthen budgeting through precise and instinctive monitoring of your expenses."
-              />
-            </div>
+            {service_items.map((s, i) => (
+              <div
+                key={i}
+                className="col-xl-4 col-md-6 wow fadeInUp"
+                data-wow-delay={`0.${i + 1}s`}
+              >
+                <div className="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
+                  <div className="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+                    <Image src={s.icon} alt="icon" className="lazy-img" />
+                  </div>
+                  <div className="text">
+                    <h4 className="fw-bold mb-20 sm-mb-10">{s.title}</h4>
+                    <p className="m0">{s.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
