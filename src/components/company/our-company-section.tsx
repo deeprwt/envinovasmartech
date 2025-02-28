@@ -4,7 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 // internal
 import service_img from "@/assets/images/media/vision.jpg";
-import ramarao from "@/assets/images/thumbnail/ramarao.png";
+import ramarao from "@/assets/images/thumbnail/solar_hut.jpg";
 import SideBar from "./side-bar";
 import ImgGallery from "../gallery/img-gallery";
 
@@ -44,17 +44,12 @@ const OurCompanySection = () => {
   const [isVideoOpen, setIsVideoOpen] = useState<boolean>(false);
   return (
     <>
-
       <div className="fancy-banner-five position-relative pt-80 md-pt-60 pb-80 md-pb-60">
         {/* Dark overlay */}
         <div className="position-absolute top-0 left-0 w-100 h-100" />
 
-        <div className="container position-relative h-100 d-flex align-items-center justify-content-center">
+        <div className="container service-details position-relative h-100 d-flex align-items-center justify-content-center">
           <div className="position-relative">
-            {/* <p className="text-white text-xl pt-30 md-pt-10 pb-45 lg-pb-30">
-        Watch our intro video to get the idea about our services & many more
-      </p> */}
-
             {/* Main image */}
             <Image
               src={ramarao}
@@ -64,9 +59,9 @@ const OurCompanySection = () => {
             />
 
             {/* Video play button */}
-            <a
-              className="fancybox rounded-circle video-icon tran5s text-center d-flex align-items-center justify-content-center cursor-pointer"
-              onClick={() => setIsVideoOpen(true)}
+            <div
+              className="tran5s text-center align-items-center justify-content-center cursor-pointer details-meta solar_hut"
+              // onClick={() => setIsVideoOpen(true)}
               style={{
                 position: "absolute",
                 top: "50%",
@@ -75,13 +70,26 @@ const OurCompanySection = () => {
                 zIndex: 1, // Ensure it is above the image
               }}
             >
-              <Image
+              <h2  className="text-white fw-bold">
+                The Ultimate Smart Solar Hut
+              </h2>
+              <p className="text-white text-xl pt-10 pb-20">
+                Where comfort meets Sustainability & Connection
+              </p>
+              <Link
+                href="/contact"
+                className="btn-seventeen d-inline-flex align-items-center tran3s"
+              >
+                <span className="text">Connect Now</span>
+                <i className="bi bi-arrow-right"></i>
+              </Link>
+              {/* <Image
                 src={sticker}
                 alt="sticker"
                 className="lazy-img"
                 style={imgStyle}
-              />
-            </a>
+              /> */}
+            </div>
           </div>
         </div>
       </div>

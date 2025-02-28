@@ -25,6 +25,8 @@ import logo_2 from "@/assets/images/logo/logome.png";
 import HeroVideoTwo from "@/components/hero-banner/hero-video-two";
 import FaqSolutionsThree from "@/components/faq/faq-section-three";
 import HeaderSix from "@/layout/header/header-six";
+import AwardsSection from "@/components/company/awards-section";
+import LocationTabsData from "@/components/tabs/location-taps";
 
 export const metadata = {
   title: "About PiStar | Foot Scan with High-Accuracy Sensors",
@@ -52,7 +54,7 @@ const AboutUsPage = () => {
         {/* <HeaderTwo /> */}
         <HeaderSix />
         {/* header end */}
-        <main className="bgcolor2">
+        <main>
           {/* breadcrumb start */}
             <HeroVideoTwo />
           {/* <BreadcrumbOne
@@ -129,6 +131,8 @@ const AboutUsPage = () => {
           {/* news letter start */}
           {/* <NewsletterBanner /> */}
           {/* news letter end */}
+          <LocationTabsData />
+          <AwardsSection />
         </main>
 
         {/* footer start */}

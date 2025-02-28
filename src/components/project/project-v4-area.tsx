@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,19 +30,20 @@ const ProjectFourArea = () => {
   };
   return (
     <>
-        <div className="position-relative light-bg pt-120 lg-pt-80 service-details">
-      <div className="container">
-        <div className="position-relative">
-          <div className="row">
-            <div className="col-lg-12 wow fadeInLeft">
-              <div className="title-one text-center mb-50 lg-mb-30 md-mb-10 details-meta">
-                <h2>Our Gallery</h2>
+      <div className="position-relative light-bg pt-120 lg-pt-80 service-details">
+        <div className="container">
+          <div className="position-relative">
+            <div className="row">
+              <div className="col-lg-12 wow fadeInLeft">
+                <div className="title-one text-center mb-50 lg-mb-30 md-mb-10 details-meta">
+                  <h2>Who is it for?
+                  </h2>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
       <div className="portfolio-two light-bg position-relative  pb-80 lg-mb-60">
         <div className="container">
           <div className="position-relative">
@@ -70,33 +71,35 @@ const ProjectFourArea = () => {
                             <i className="bi bi-plus"></i>
                           </a>
                         </div>
-                        {/* <div className="caption">
+                        <div className="caption">
                           <div className="d-flex align-items-center justify-content-between">
                             <div>
-                              <ul className="style-none d-flex tag">
+                              {/* <ul className="style-none d-flex tag">
                                 {item.tags.map((t, i) => (
                                   <li key={i}>{t}</li>
                                 ))}
-                              </ul>
-                              <h6>
-                                <Link
+                              </ul> */}
+                              <h6 className="pj-title">
+                                {item.title}
+                                {/* <Link
                                   href="/project-details-v1"
                                   className="pj-title"
                                 >
                                   {item.title}
-                                </Link>
+                                </Link> */}
                               </h6>
+                              <p>{item.para}</p>
                             </div>
-                            <div>
+                            {/* <div>
                               <Link
                                 href="/project-details-v1"
                                 className="arrow tran3s"
                               >
                                 <i className="bi bi-arrow-up-right"></i>
                               </Link>
-                            </div>
+                            </div> */}
                           </div>
-                        </div> */}
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -104,14 +107,14 @@ const ProjectFourArea = () => {
               </ResponsiveMasonry>
             </div>
 
-            <div className="section-btn text-center mt-30 lg-mt-10">
+            {/* <div className="section-btn text-center mt-30 lg-mt-10">
               <a
                 href="#"
                 className="btn-nine rounded-circle d-inline-flex align-items-center justify-content-center tran3s"
               >
                 <i className="bi bi-arrow-up-right"></i>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

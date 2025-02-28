@@ -19,7 +19,7 @@ const slider_setting = {
   dots: false,
   arrows: false,
   centerPadding: "0px",
-  slidesToShow: 4,
+  slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
@@ -47,7 +47,7 @@ const slider_setting = {
     {
       breakpoint: 992,
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 5,
       },
     },
     {
@@ -69,7 +69,7 @@ const slider_setting2 = {
   dots: false,
   arrows: false,
   centerPadding: "0px",
-  slidesToShow: 4,
+  slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
@@ -91,7 +91,7 @@ const slider_setting2 = {
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 5,
         },
       },
       {
@@ -110,23 +110,23 @@ const slider_setting2 = {
   };
 
 // slider logos
-const slider_logos:StaticImageData[] = [img1, img2, img3, img4, img5, img1, img2, img3, img2, img4, img5,];
+const slider_logos:StaticImageData[] = [img1, img2, img3, img4, img5, img1, img2, img3, img4, img5,];
 // const slider_logos2:StaticImageData[] = [img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23,];
 
 const ClintLogo = () => {
   return (
     <>
         <div className="partner-logo-one  pb-80 lg-pb-40 service-details">
-            <div className="container">
+            <div className="">
                     <div className="title-one text-center mb-60 details-meta">
                         {/* <div className="upper-title"></div> */}
                         <h2>Our Client
                         </h2>
                     </div>
-                <Slider {...slider_setting} className="partner-slider-one">
+                <Slider {...slider_setting} className="partner-slider-one green-boader">
                 {slider_logos.map((logo, i) => (
                     <div key={i} className="item">
-                    <div className="p-3">
+                    <div className="p-3 d-flex justify-content-center">
                         <Image src={logo} alt="Cgb Clint Logo" layout='' width={154} height={94} style={{ height: "auto" }} />
                     </div>
                     </div>

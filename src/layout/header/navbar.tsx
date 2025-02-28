@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 // internal
@@ -11,6 +11,22 @@ import menu_data from "@/data/menu-data";
 import { usePathname } from "next/navigation";
 
 const Navbar = ({ logo_white = false }: { logo_white?: boolean }) => {
+  const [navClass, setNavClass] = useState<{ [key: number]: string }>({});
+
+  useEffect(() => {
+    const newNavClass: { [key: number]: string } = {};
+
+    menu_data.forEach((menu) => {
+      if (menu.title.includes("Contact Us")) {
+        newNavClass[menu.id] = `${menu.sub_dropdown ? "menu-style" : ""} extra-class`;
+      } else {
+        newNavClass[menu.id] = "";
+      }
+    });
+
+    setNavClass(newNavClass);
+  }, []);
+  
   const pathname = usePathname();
   return (
     <ul className="navbar-nav align-items-lg-center">
@@ -27,137 +43,29 @@ const Navbar = ({ logo_white = false }: { logo_white?: boolean }) => {
           </Link>
         </div>
       </li>
-      {menu_data.slice(0, Math.ceil(menu_data.length / 2)).map((menu) => (
-        <li
-          key={menu.id}
-          className={`nav-item ${menu.dropdown ? "dropdown" : ""} ${
-            menu.mega_menu ? "dropdown mega-dropdown-sm" : ""
-          } ${menu.sub_dropdown ? "dropdown" : ""}`}
-        >
-          {menu.dropdown && (
-            <>
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                data-bs-auto-close="outside"
-                aria-expanded="false"
-              >
-                {menu.title}
-              </a>
-              <ul className="dropdown-menu">
-                {menu.dropdown_menus?.map((dm, i) => (
-                  <li key={i}>
-                    <Link
-                      href={dm.link}
-                      className={`dropdown-item ${
-                        pathname === dm.link ? "active" : ""
-                      }`}
-                    >
-                      <span>{dm.title}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-          {menu.mega_menu && (
-            <>
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                data-bs-auto-close="outside"
-                aria-expanded="false"
-              >
-                {menu.title}
-              </a>
-              <ul className="dropdown-menu">
-                <li className="row gx-1">
-                  {menu.mega_menus?.map((mm, i) => (
-                    <div key={mm.id} className="col-lg-4">
-                      <div className="menu-column">
-                        <ul className="style-none mega-dropdown-list">
-                          <span
-                            className="font-weight-bold dropdown-item bg-spancolor"
-                            style={{ fontWeight: "500", fontSize: "20px" }}
-                          >
-                            {mm.subtitle}
-                          </span>{" "}
-                          {/*  add new subtitle for mega menu */}
-                          {mm.menus.map((sm, i) => (
-                            <li key={i}>
-                              <Link
-                                href={sm.link}
-                                className={`dropdown-item ${
-                                  pathname === sm.link ? "active" : ""
-                                }`}
-                              >
-                                <span>{sm.title}</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  ))}
-                </li>
-              </ul>
-            </>
-          )}
-          {/* add new 2sub menu component start  */}
-          {menu.sub_dropdown && (
-            <>
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                data-bs-auto-close="outside"
-                aria-expanded="false"
-              >
-                {menu.title}
-              </a>
-              <ul className="dropdown-menu">
-                {menu.dropdown_submenus?.map((dm, i) => (
-                  <li key={i} className={`${dm.sub_menus ? "dropdown" : ""}`}>
-                    {dm.sub_menus ? (
-                      <>
-                        <a
-                          className="nav-link dropdown-toggle"
-                          style={{
-                            color: "#fff",
-                            fontWeight: "400",
-                            margin: "0px",
-                            padding: "8px 16px",
-                          }}
-                          href="#"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside"
-                          aria-expanded="false"
-                        >
-                          {dm.title}
-                        </a>
-                        <ul className="dropdown-menu">
-                          {dm.sub_menus.map((aa, j) => (
-                            <li key={j}>
-                              <Link
-                                href={aa.link}
-                                style={{ padding: "0px 15px" }}
-                                className={`dropdown-item ${
-                                  pathname === aa.link ? "active" : ""
-                                }`}
-                              >
-                                <span>{aa.title}</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </>
-                    ) : (
+      <div className="d-flex flex-column flex-md-row">
+        {menu_data.slice(0, Math.ceil(menu_data.length / 2)).map((menu) => (
+          <li
+            key={menu.id}
+            className={`nav-item ${menu.dropdown ? "dropdown" : ""} ${
+              menu.mega_menu ? "dropdown mega-dropdown-sm" : ""
+            } ${menu.sub_dropdown ? "dropdown" : ""}`}
+          >
+            {menu.dropdown && (
+              <>
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  {menu.title}
+                </a>
+                <ul className="dropdown-menu">
+                  {menu.dropdown_menus?.map((dm, i) => (
+                    <li key={i}>
                       <Link
                         href={dm.link}
                         className={`dropdown-item ${
@@ -166,162 +74,164 @@ const Navbar = ({ logo_white = false }: { logo_white?: boolean }) => {
                       >
                         <span>{dm.title}</span>
                       </Link>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-          {/* add new 2sub menu component end  */}
-          {!menu.dropdown && !menu.mega_menu && !menu.sub_dropdown && (
-            <Link className="nav-link" href={menu.link} role="button">
-              {menu.title}
-            </Link>
-          )}
-        </li>
-      ))}
-              {/* Center Logo */}
-              <div className="logo-container d-flex d-none d-lg-block justify-content-center">
-          <Link href="/" className="d-block">
-            <Image
-              width="165"
-              height="60"
-              src={logo_white ? logo_2 : logo}
-              alt="logo"
-            />
-          </Link>
-        </div>
-        {menu_data.slice(Math.ceil(menu_data.length / 2)).map((menu)  => (
-        <li
-          key={menu.id}
-          className={`nav-item ${menu.dropdown ? "dropdown" : ""} ${
-            menu.mega_menu ? "dropdown mega-dropdown-sm" : ""
-          } ${menu.sub_dropdown ? "dropdown" : ""}`}
-        >
-          {menu.dropdown && (
-            <>
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                data-bs-auto-close="outside"
-                aria-expanded="false"
-              >
-                {menu.title}
-              </a>
-              <ul className="dropdown-menu">
-                {menu.dropdown_menus?.map((dm, i) => (
-                  <li key={i}>
-                    <Link
-                      href={dm.link}
-                      className={`dropdown-item ${
-                        pathname === dm.link ? "active" : ""
-                      }`}
-                    >
-                      <span>{dm.title}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-          {menu.mega_menu && (
-            <>
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                data-bs-auto-close="outside"
-                aria-expanded="false"
-              >
-                {menu.title}
-              </a>
-              <ul className="dropdown-menu">
-                <li className="row gx-1">
-                  {menu.mega_menus?.map((mm, i) => (
-                    <div key={mm.id} className="col-lg-4">
-                      <div className="menu-column">
-                        <ul className="style-none mega-dropdown-list">
-                          <span
-                            className="font-weight-bold dropdown-item bg-spancolor"
-                            style={{ fontWeight: "500", fontSize: "20px" }}
-                          >
-                            {mm.subtitle}
-                          </span>{" "}
-                          {/*  add new subtitle for mega menu */}
-                          {mm.menus.map((sm, i) => (
-                            <li key={i}>
-                              <Link
-                                href={sm.link}
-                                className={`dropdown-item ${
-                                  pathname === sm.link ? "active" : ""
-                                }`}
-                              >
-                                <span>{sm.title}</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+                    </li>
                   ))}
-                </li>
-              </ul>
-            </>
-          )}
-          {/* add new 2sub menu component start  */}
-          {menu.sub_dropdown && (
-            <>
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                data-bs-auto-close="outside"
-                aria-expanded="false"
-              >
-                {menu.title}
-              </a>
-              <ul className="dropdown-menu">
-                {menu.dropdown_submenus?.map((dm, i) => (
-                  <li key={i} className={`${dm.sub_menus ? "dropdown" : ""}`}>
-                    {dm.sub_menus ? (
-                      <>
-                        <a
-                          className="nav-link dropdown-toggle"
-                          style={{
-                            color: "#fff",
-                            fontWeight: "400",
-                            margin: "0px",
-                            padding: "8px 16px",
-                          }}
-                          href="#"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside"
-                          aria-expanded="false"
+                </ul>
+              </>
+            )}
+            {menu.mega_menu && (
+              <>
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  {menu.title}
+                </a>
+                <ul className="dropdown-menu">
+                  <li className="row gx-1">
+                    {menu.mega_menus?.map((mm, i) => (
+                      <div key={mm.id} className="col-lg-4">
+                        <div className="menu-column">
+                          <ul className="style-none mega-dropdown-list">
+                            <span
+                              className="font-weight-bold dropdown-item bg-spancolor"
+                              style={{ fontWeight: "500", fontSize: "20px" }}
+                            >
+                              {mm.subtitle}
+                            </span>{" "}
+                            {/*  add new subtitle for mega menu */}
+                            {mm.menus.map((sm, i) => (
+                              <li key={i}>
+                                <Link
+                                  href={sm.link}
+                                  className={`dropdown-item ${
+                                    pathname === sm.link ? "active" : ""
+                                  }`}
+                                >
+                                  <span>{sm.title}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    ))}
+                  </li>
+                </ul>
+              </>
+            )}
+            {/* add new 2sub menu component start  */}
+            {menu.sub_dropdown && (
+              <>
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  {menu.title}
+                </a>
+                <ul className="dropdown-menu">
+                  {menu.dropdown_submenus?.map((dm, i) => (
+                    <li key={i} className={`${dm.sub_menus ? "dropdown" : ""}`}>
+                      {dm.sub_menus ? (
+                        <>
+                          <a
+                            className="nav-link dropdown-toggle"
+                            style={{
+                              color: "#fff",
+                              fontWeight: "400",
+                              margin: "0px",
+                              padding: "8px 16px",
+                            }}
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside"
+                            aria-expanded="false"
+                          >
+                            {dm.title}
+                          </a>
+                          <ul className="dropdown-menu">
+                            {dm.sub_menus.map((aa, j) => (
+                              <li key={j}>
+                                <Link
+                                  href={aa.link}
+                                  style={{ padding: "0px 15px" }}
+                                  className={`dropdown-item ${
+                                    pathname === aa.link ? "active" : ""
+                                  }`}
+                                >
+                                  <span>{aa.title}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      ) : (
+                        <Link
+                          href={dm.link}
+                          className={`dropdown-item ${
+                            pathname === dm.link ? "active" : ""
+                          }`}
                         >
-                          {dm.title}
-                        </a>
-                        <ul className="dropdown-menu">
-                          {dm.sub_menus.map((aa, j) => (
-                            <li key={j}>
-                              <Link
-                                href={aa.link}
-                                style={{ padding: "0px 15px" }}
-                                className={`dropdown-item ${
-                                  pathname === aa.link ? "active" : ""
-                                }`}
-                              >
-                                <span>{aa.title}</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </>
-                    ) : (
+                          <span>{dm.title}</span>
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+            {/* add new 2sub menu component end  */}
+            {!menu.dropdown && !menu.mega_menu && !menu.sub_dropdown && (
+              <Link className="nav-link" href={menu.link} role="button">
+                 {menu.title === "Home" ? <i className="bi bi-house-door-fill"></i> : `${menu.title}`}
+              </Link>
+            )}
+          </li>
+        ))}
+      </div>
+      {/* Center Logo */}
+      <div className="logo-container d-flex d-none d-lg-block justify-content-center">
+        <Link href="/" className="d-block">
+          <Image
+            width="165"
+            height="60"
+            src={logo_white ? logo_2 : logo}
+            alt="logo"
+          />
+        </Link>
+      </div>
+      <div className="d-flex flex-column flex-md-row">
+        {menu_data.slice(Math.ceil(menu_data.length / 2)).map((menu) => (
+          <li
+            key={menu.id}
+            className={`nav-item ${menu.dropdown ? "dropdown" : ""} ${
+              menu.mega_menu ? "dropdown mega-dropdown-sm" : ""
+            } ${menu.sub_dropdown ? "dropdown" : ""}`}
+          >
+            {menu.dropdown && (
+              <>
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  {menu.title}
+                </a>
+                <ul className="dropdown-menu">
+                  {menu.dropdown_menus?.map((dm, i) => (
+                    <li key={i}>
                       <Link
                         href={dm.link}
                         className={`dropdown-item ${
@@ -330,20 +240,130 @@ const Navbar = ({ logo_white = false }: { logo_white?: boolean }) => {
                       >
                         <span>{dm.title}</span>
                       </Link>
-                    )}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+            {menu.mega_menu && (
+              <>
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  {menu.title}
+                </a>
+                <ul className="dropdown-menu">
+                  <li className="row gx-1">
+                    {menu.mega_menus?.map((mm, i) => (
+                      <div key={mm.id} className="col-lg-4">
+                        <div className="menu-column">
+                          <ul className="style-none mega-dropdown-list">
+                            <span
+                              className="font-weight-bold dropdown-item bg-spancolor"
+                              style={{ fontWeight: "500", fontSize: "20px" }}
+                            >
+                              {mm.subtitle}
+                            </span>{" "}
+                            {/*  add new subtitle for mega menu */}
+                            {mm.menus.map((sm, i) => (
+                              <li key={i}>
+                                <Link
+                                  href={sm.link}
+                                  className={`dropdown-item ${
+                                    pathname === sm.link ? "active" : ""
+                                  }`}
+                                >
+                                  <span>{sm.title}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    ))}
                   </li>
-                ))}
-              </ul>
-            </>
-          )}
-          {/* add new 2sub menu component end  */}
-          {!menu.dropdown && !menu.mega_menu && !menu.sub_dropdown && (
-            <Link className="nav-link" href={menu.link} role="button">
-              {menu.title}
-            </Link>
-          )}
-        </li>
-      ))}
+                </ul>
+              </>
+            )}
+            {/* add new 2sub menu component start  */}
+            {menu.sub_dropdown && (
+              <>
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  {menu.title}
+                </a>
+                <ul className="dropdown-menu">
+                  {menu.dropdown_submenus?.map((dm, i) => (
+                    <li key={i} className={`${dm.sub_menus ? "dropdown" : ""}`}>
+                      {dm.sub_menus ? (
+                        <>
+                          <a
+                            className="nav-link dropdown-toggle"
+                            style={{
+                              color: "#fff",
+                              fontWeight: "400",
+                              margin: "0px",
+                              padding: "8px 16px",
+                            }}
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside"
+                            aria-expanded="false"
+                          >
+                            {dm.title}
+                          </a>
+                          <ul className="dropdown-menu">
+                            {dm.sub_menus.map((aa, j) => (
+                              <li key={j}>
+                                <Link
+                                  href={aa.link}
+                                  style={{ padding: "0px 15px" }}
+                                  className={`dropdown-item ${
+                                    pathname === aa.link ? "active" : ""
+                                  }`}
+                                >
+                                  <span>{aa.title}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      ) : (
+                        <Link
+                          href={dm.link}
+                          className={`dropdown-item ${
+                            pathname === dm.link ? "active" : ""
+                          }`}
+                        >
+                          <span>{dm.title}</span>
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+            {/* add new 2sub menu component end  */}
+            {!menu.dropdown && !menu.mega_menu && !menu.sub_dropdown && (
+              <Link className={`nav-link ${navClass[menu.id]}`} href={menu.link} role="button">
+                {menu.title}
+              </Link>
+            )}
+          </li>
+        ))}
+      </div>
       <li className="d-md-none ps-2 pe-2 text-center">
         {/* <a
           href="#"

@@ -37,7 +37,6 @@ const slider_setting = {
   autoplaySpeed: 3000,
 };
 
-
 const HeroBannerEight = () => {
   return (
     <div className="hero-banner-one vh-90 pt-225 xl-pt-200 lg-pt-150 pb-150 lg-pb-100 position-relative vh-100 d-flex justify-content-center">
@@ -56,7 +55,7 @@ const HeroBannerEight = () => {
           <div className="row">
             <div className="col-lg-12 m-auto text-center">
               <h1 className="hero-heading fw-bold wow fadeInUp mt-10 text-white">
-                A Future Beyond Imagination
+                Innovative Solar Solutions for Smarter, Sustainable Spaces
                 {/* Revolutionizing Foot Health with
                   <span className="d-inline-block position-relative">
                     &nbsp; AI-Driven
@@ -73,9 +72,11 @@ const HeroBannerEight = () => {
                 className="text-xl pt-35 pb-35 wow fadeInUp text-white"
                 data-wow-delay="0.1s"
               >
-                “Step into the future with Smart Solar Hub, a symbol of infinite
-                solar potential where custom designed architecture meets
-                technology”
+                Discover advanced solar-powered solutions designed to transform
+                public and private spaces. From smart street furniture to EV
+                charging stations and custom solar projects, we deliver
+                energy-efficient innovations that blend functionality,
+                sustainability, and modern design.
               </p>
               <div className="d-inline-flex flex-wrap align-items-center">
                 <Link href="/contact" className="btn-one mt-15 me-4">

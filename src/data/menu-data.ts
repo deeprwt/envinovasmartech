@@ -27,13 +27,13 @@ const menu_data: IMenu[] = [
   },
   {
     id: 2,
-    link: "/",
+    link: "/about-us",
     title: "About Us",
   },                                                                                                                                                   
   {
     id: 5,
     link: "/article",
-    title: "Articles",
+    title: "Media",
   },
   {
     id: 6,

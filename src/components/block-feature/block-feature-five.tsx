@@ -22,25 +22,28 @@ const BlockFeatureFive = () => {
           </div>
 
           <div className="row">
+            
             {service_items.map((s, i) => (
               <div
                 key={i}
                 className="col-xl-3 col-md-3 d-flex wow fadeInUp"
                 data-wow-delay={`0.${i + 1}s`}
               >
-                <div className="card-style-seven text-center vstack tran3s w-100 mt-30">
-                  <div className="icon tran3s rounded-circle d-flex align-items-center justify-content-center m-auto">
-                    <Image src={s.icon} alt="icon" className="lazy-img" />
-                  </div>
-                  <h4 className="fw-bold mt-40 md-mt-20 mb-20">{s.title}</h4>
-                  {/* <p className="mb-60 md-mb-40">{s.desc}</p> */}
-                  <Link
-                    href="/service-v2"
-                    className="arrow-btn tran3s m-auto stretched-link"
-                  >
-                    <Image src={arrow} alt="icon" className="lazy-img" />
-                  </Link>
-                </div>
+                <Link
+                  href="/service-v2"
+                  className="card-style-seven text-center vstack tran3s w-100 mt-30"
+                >
+                    <div className="icon tran3s rounded-circle d-flex align-items-center justify-content-center m-auto">
+                      <Image src={s.icon} alt="icon" className="lazy-img" />
+                    </div>
+                    <h4 className="fw-bold mt-20 md-mt-20 mb-20 text-capitalize">{s.title}</h4>
+                    {/* <Link
+                      href="/service-v2"
+                      className="arrow-btn tran3s m-auto stretched-link"
+                    >
+                      <Image src={arrow} alt="icon" className="lazy-img" />
+                    </Link> */}
+                </Link>
               </div>
             ))}
           </div>

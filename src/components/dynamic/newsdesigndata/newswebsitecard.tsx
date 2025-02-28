@@ -31,9 +31,9 @@ const NewsWebsiteCard: React.FC<NewsCardProps> = ({ news }) => {
       <div className="post-data">
         {/* <div className="post-info">{news.category}</div> */}
         <div className="d-flex justify-content-center align-items-center flex-wrap">
-          {/* <Link href={`/projects/${news.link}`} className="blog-title">
+          <Link href={`/projects/${news.link}`} className="blog-title text-center pb-20">
             <h4 style={{ fontSize: "23px" }}>{news.title}</h4>
-          </Link> */}
+          </Link>
           <Link href={`/projects/${news.link}`}
             className="btn-one tran3s"
           >

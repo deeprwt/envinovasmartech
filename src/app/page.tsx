@@ -33,6 +33,7 @@ import FooterThree from "@/layout/footer/footer-three";
 import FooterFour from "@/layout/footer/footer-four";
 import FooterFive from "@/layout/footer/footer-five";
 import FancyBannerSix from "@/components/fancy-banner/fancy-banner-six";
+import Link from "next/link";
 
 const backImg1 = {
   backgroundImage: `url('${bg_image1.src}')`,
@@ -90,9 +91,9 @@ export default function HomePage() {
           <BlockFeatureFive />
           {/* <BlockFeatureThree /> */}
 
-          <FancyBannerSix />
+          {/* <FancyBannerSix /> */}
 
-          {/* <OurCompanySection /> */}
+          <OurCompanySection />
 
           <ProjectFourArea />
 
@@ -109,9 +110,54 @@ export default function HomePage() {
           {/* <AwardsSection /> */}
 
           {/* <PopUpModal /> */}
-
-          
-
+          <div
+            className="contact-us-section pt-80 lg-pt-80"
+            style={backImg2}
+            // style={{background:"#292e31"}}
+          >
+            <div className="container">
+              <div className="position-relative">
+                <div className="bg-wrapper lg-mt-40">
+                  <div className="row">
+                    <div className="col-lg-7">
+                      <div className="title-one details-meta">
+                        {/* <div className="upper-title">About Us</div> */}
+                        <h2 className="text-white">
+                          Have a project or a business? <br />
+                          Connect to us! <br />
+                          We will partner your growth...
+                        </h2>
+                      </div>
+                      <p className="text-lg mt-45 lg-mt-30 mb-35 lg-mb-20 paracolor">
+                        Interested in renewables, smart cities and urban
+                        development? <br />
+                        Let&apos;s partner up!
+                      </p>
+                      <Link
+                        href="/project-details-v1"
+                        className="btn-two icon-link"
+                      >
+                        <span className="text-white">Full Case Study</span>
+                        <div className="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+                          <i className="bi bi-arrow-right"></i>
+                        </div>
+                      </Link>
+                    </div>
+                    <div className="col-lg-5 d-flex">
+                      <div className="ms-auto pe-xxl-5 ps-xxl-5 pb-35 md-mt-60 d-flex align-items-end">
+                        <Image
+                          src={img4}
+                          alt="envo aboutus"
+                          className="shap-animate rounded"
+                          style={{ height: "auto" }}
+                        ></Image>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
 
         {/* footer start */}

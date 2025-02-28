@@ -5,6 +5,7 @@ export interface IPortfolio {
   img: StaticImageData;
   tags: string[];
   title: string;
+  para: string;
   portfolio: string;
   sub_title?: string;
 }

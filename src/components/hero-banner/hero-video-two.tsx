@@ -38,8 +38,8 @@ const HeroVideoTwo = () => {
         <div className="container position-relative h-100 d-flex align-items-center justify-content-center">
           <div className="row">
             <div className="col-lg-10 m-auto text-center">
-              <h3 className="hero-heading fw-bold wow fadeInUp mt-10 text-white">
-                About Pistar Tech
+              <h3 className="hero-heading fw-bold wow fadeInUp mt-10 text-white" style={{width: "max-content"}}>
+                About Envinovas
                 {/* <span className="d-inline-block position-relative">
                  &nbsp; AI-Driven
                   <Image src={shape} alt="shape" className="lazy-img" style={imageStyle} />
@@ -50,7 +50,7 @@ const HeroVideoTwo = () => {
                 className="text-xl pt-35 pb-35 wow fadeInUp text-white"
                 data-wow-delay="0.1s"
               >
-                Discover Pistar Tech Pioneers of <b>Plantar Pressure Analysis</b> Technology for Advanced Foot Care.
+                Howering the fututre
               </p>
               {/* <div className="d-inline-flex flex-wrap align-items-center">
                 <Link href="/about-us" className="btn-four mt-15 me-4">

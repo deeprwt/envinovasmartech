@@ -8,13 +8,21 @@ import icon from "@/assets/images/icon/icon_94.svg";
 import LoginModal from "@/components/common/login-modal";
 import useSticky from "@/hooks/use-sticky";
 import Navbar from "./navbar";
+import bg_image1 from "@/assets/images/background/backgrondsolar.jpeg";
 
 const HeaderSix = () => {
+  const backImg1 = {
+    backgroundImage: `url('${bg_image1.src}')`,
+    backgroundSize: "cover,auto",
+    backgroundPosition: "center",
+    backgroundAttachment: "local",
+    backgroundColor: "#292e31",
+  };
   const { sticky } = useSticky();
   return (
     <>
       <header
-        className={`theme-main-menu menu-overlay menu-style-six sticky-menu ${
+        className={`theme-main-menu menu-overlay menu-style-six sticky-menu your-div ${
           sticky ? "fixed" : ""
         }`}
       >

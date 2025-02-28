@@ -51,13 +51,6 @@ const BlockFeatureTen = () => {
         </div>
         <div className="line-wrapper position-relative">
           <div className="row gx-lg-5">
-            <div className="col-xl-4 col-md-6 wow fadeInUp">
-              <CardItem
-                icon={icon_1}
-                title="Multiple Account"
-                subtitle="Effortless payments and transfers with our streamlined banking process."
-              />
-            </div>
             {service_items.map((s, i) => (
               <div
                 key={i}

@@ -13,8 +13,8 @@ import Rahul  from "@/assets/images/media/6.jpg"
 import Moumita  from "@/assets/images/media/2.jpg"
 import Kushangi  from "@/assets/images/media/1.jpg"
 import Shobha  from "@/assets/images/media/3.jpg"
-import anisfatema from "@/assets/images/team/anisfatema.jpg";
-import aftab from "@/assets/images/team/aftab.jpg";
+import ishank from "@/assets/images/team/ishank.jpg";
+import arjun from "@/assets/images/team/arjun.jpg";
 import Rawan from "@/assets/images/media/8.png"
 import gif1 from "@/assets/images/media/gif.gif"
 import gif2 from "@/assets/images/media/gif2.gif"
@@ -39,137 +39,28 @@ import doc4 from "@/assets/images/team/cmr-surgeon-vanash-patel.jpg";
 
 
 const team_data: ITeam[] = [
+
   {
     id: 1,
-    img: doc1,
-    name: "John Smith",
-    designation: "Manager",
-    page: "home",
-    gif: gif1,
-  },
-  {
-    id: 2,
-    img: doc2,
-    name: "Rylan Blackthorn",
-    designation: "Marketing Expert",
-    page: "home",
-    gif: gif1,
-  },
-  {
-    id: 3,
-    img: doc3,
-    name: "Mark Smith",
-    designation: "Analysis",
-    page: "home",
-    gif: gif1,
-  },
-  {
-    id: 4,
-    img: doc4,
-    name: "Maria Escolova",
-    designation: "Senior Officer",
-    page: "home",
-    gif: gif1,
-  },
-  // home 5
-  {
-    id: 5,
-    img: team_5,
-    name: "Stormrider",
-    designation: "Owner & Founder",
-    page: "home-5",
-    gif: gif1,
-  },
-  {
-    id: 6,
-    img: team_6,
-    name: "Frostfall",
-    designation: "Project Manager",
-    page: "home-5",
-    gif: gif1,
-  },
-  {
-    id: 7,
-    img: anisfatema,
-    name: "Dr. Anis Fatema",
+    img: arjun,
+    name: "Arjun Mittal",
     designation: "Chief Executive Officer",
     page: "team-three",
     gif: gif1,
+    url : "https://www.linkedin.com/in/arjun-mittal09/",
   },
   {
-    id: 8,
-    img: aftab,
-    name: "Dr. Aftab Hussain",
-    designation: "Technical Advisor ",
+    id: 2,
+    img: ishank,
+    name: "Ishank Bansal",
+    designation: "Chief Operating Officer",
     page: "team-three",
     gif: gif1,
+    url : "https://www.linkedin.com/in/ishankb29/",
   },
   // team three
-  {
-    id: 9,
-    img: Rahul,
-    name: "Rahul Sharma",
-    designation: "Finance",
-    page: "team-thr",
-    gif: gif2,
-  },
-  // {
-  //   id: 10,
-  //   img: Moumita,
-  //   name: "Moumita Ganguly",
-  //   designation: "HR",
-  //   page: "team-three",
-  //   gif: gif3,
-  // },
-  // {
-  //   id: 11,
-  //   img: Shobha,
-  //   name: "Shobha M",
-  //   designation: "Account Manager",
-  //   page: "home",
-  //   gif: gif1,
-  // },
-  // {
-  //   id: 12,
-  //   img: Kushangi,
-  //   name: "Kushangi Shrithika",
-  //   designation: "Social Media ",
-  //   page: "home",
-  //   gif: gif4,
-  // },
-  // team page
-  // {
-  //   id: 13,
-  //   img: team_13,
-  //   name: "Starfire",
-  //   designation: "Manager",
-  //   page: "team",
-  //   gif: gif1,
-  // },
-  // {
-  //   id: 14,
-  //   img: team_14,
-  //   name: "Thunderstrike",
-  //   designation: "Marketing Expert",
-  //   page: "team",
-  //   gif: gif1,
-  // },
-  // {
-  //   id: 15,
-  //   img: team_15,
-  //   name: "Silverstone",
-  //   designation: "Analysis",
-  //   page: "team",
-  //   gif: gif1,
-  // },
-  // {
-  //   id: 16,
-  //   img: team_16,
-  //   name: "Ravenshadow",
-  //   designation: "Senior Officer",
-  //   page: "team",
-  //   gif: gif1,
-  // },
+
+
 ];
 
 export default team_data;
