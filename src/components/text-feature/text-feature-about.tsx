@@ -6,7 +6,8 @@ import icons from "@/assets/images/icon/icon_09.svg";
 import icon_2 from "@/assets/images/icon/icon_10.svg";
 import icon_3 from "@/assets/images/icon/icon_11.svg";
 import shape from "@/assets/images/shape/shape_05.svg";
-import about from "@/assets/images/assets/about.png";
+import about from "@/assets/images/envo/campa.png";
+import campa from "@/assets/images/envo/campa.png";
 import mission from "@/assets/images/icon/mission.svg";
 import vision from "@/assets/images/icon/vision.svg";
 import bg_image1 from "@/assets/images/background/contactbanner.jpg";
@@ -28,7 +29,7 @@ function CardItem({
   title,
   desc,
   link,
- bg_img,
+  bg_img,
 }: {
   icon: StaticImageData;
   title: string;
@@ -50,11 +51,11 @@ function CardItem({
           <Image src={icons} alt="icon" className="lazy-img icon ms-1" />
         </Link> */}
         <Image
-        src={bg_img}
-        alt="bg-img"
-        className="lazy-img mt-auto me-auto ms-auto w-100"
-        layout="responsive"
-      />
+          src={bg_img}
+          alt="bg-img"
+          className="lazy-img mt-auto me-auto ms-auto w-100"
+          layout="responsive"
+        />
       </div>
     </div>
   );
@@ -65,8 +66,8 @@ const TextFeatureAbout = ({ style_2 = false }: { style_2?: boolean }) => {
     <>
       {!style_2 && (
         <div
-          className="text-feature-one pt-150 lg-pt-100 pb-150 lg-pb-100  service-details"
-          style={backImg1}
+          className="text-feature-one pt-80 lg-pt-80 pb-80 lg-pb-80  service-details"
+          // style={backImg1}
         >
           <div className="container">
             <div className="row align-items-center details-meta">
@@ -75,7 +76,7 @@ const TextFeatureAbout = ({ style_2 = false }: { style_2?: boolean }) => {
                   <Image
                     src={about}
                     alt="cgb aboutus"
-                    className="shap-animate"
+                    className="shap-animate rounded"
                     style={{ height: "auto" }}
                   ></Image>
                   {/* <ul className="style-none">
@@ -85,27 +86,26 @@ const TextFeatureAbout = ({ style_2 = false }: { style_2?: boolean }) => {
                     </ul> */}
                 </div>
               </div>
-              <div className="col-xl-7 col-lg-6 order-1 order-lg-2 wow fadeInLeft">
-                <div className="title-one details-meta">
-                  {/* <div className="upper-title">About Us</div> */}
-                  <h2 className="text-white">About Us</h2>
-                </div>
-                <p className="text-lg mt-45 lg-mt-30 mb-35 lg-mb-20 paracolor">
-                  PiStarTech Private Limited is a cutting-edge healthtech
-                  startup, founded on 4th May 2021 by Anis Fatema, and is rooted
-                  in her research project. We are proud to be India&lsquo;s
-                  first startup with the complete in-house design and
-                  manufacturing of the Podiascanner Mat. Our patented pressure
-                  sensing technology provides comprehensive plantar pressure
-                  analysis, offering valuable insights that support doctors in
-                  their diagnosis.
-                  <br />
-                  Operating from the CIE IIIT Hyderabad incubation center,
-                  PiStarTech is committed to innovation in foot pressure
-                  analysis. In addition to our flagship product, we offer
-                  customized pressure sensing systems tailored to meet the
-                  specific needs of our customers, helping them achieve precise
-                  and reliable diagnostic outcomes.
+              <div className="col-xl-7 col-lg-6 order-1 order-lg-2 wow fadeInLeft text-feature-seven">
+                <p className="text-lg mb-35 lg-mb-20">
+                  Founded in 2023 by visionary entrepreneurs <b>Arjun Mittal</b> and
+                  <b>Ishank Bansal</b>, Envinova Smartech is redefining how technology
+                  integrates into outdoor spaces. Headquartered in Chandigarh,
+                  we design and build <b>Smart Solar Huts</b>—innovative off-grid
+                  solutions that combine cutting-edge solar technology with
+                  modern amenities, including:
+                </p>
+                <ul className="p-0">
+                  <li>Lighting solutions</li>
+                  <li>Wi-Fi connectivity</li>
+                  <li>Emergency health services</li>
+                  <li>Mobile and laptop charging</li>
+                  <li>And other essential conveniences</li>
+                </ul>
+                <p className="text-lg mb-35 lg-mb-20">
+                  Our mission is to make solar energy an integral part of
+                  everyday life by creating smarter, greener spaces that inspire
+                  seamless engagement with technology.
                 </p>
               </div>
               {/* <div className="col-12 wow fadeInUp order-3">
@@ -166,12 +166,12 @@ const TextFeatureAbout = ({ style_2 = false }: { style_2?: boolean }) => {
                     className="lazy-img icon ms-1"
                   />
                 </Link> */}
-                <Image
-        src={img2}
-        alt="bg-img"
-        className="lazy-img mt-auto me-auto ms-auto w-100"
-        layout="responsive"
-      />
+                  <Image
+                    src={img2}
+                    alt="bg-img"
+                    className="lazy-img mt-auto me-auto ms-auto w-100"
+                    layout="responsive"
+                  />
                 </div>
                 <div className="col-lg-6 ms-auto wow fadeInRight">
                   <CardItem

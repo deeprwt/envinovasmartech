@@ -4,6 +4,7 @@ import Link from "next/link";
 import CounterUp from "../common/counter-up";
 import bg_image from "@/assets/images/background/counter_dark_pattern.png";
 import bg_image2 from "@/assets/images/background/background-explore.jpg";
+import campa from "@/assets/images/envo/campa.png";
 
 const backImg = {
   backgroundImage: `url('${bg_image.src}')`,
@@ -41,7 +42,10 @@ function CounterBlock({
       className="counter-block-two mt-35 mb-35 wow fadeInUp"
       data-wow-delay={`0.${delay}s`}
     >
-      <div className="main-count justify-content-center fw-500 d-flex" style={{ color: "#62c087" }}>
+      <div
+        className="main-count justify-content-center fw-500 d-flex"
+        style={{ color: "#62c087" }}
+      >
         {prev_text && prev_text}
         <span className="counter">
           <CounterUp number={num} text={text} decimal={decimal} />
@@ -58,25 +62,30 @@ const TextFeatureHome = ({ style_2 = false }: { style_2?: boolean }) => {
       {!style_2 && (
         <div
           className="text-feature-one service-details pt-150 lg-pt-100 pb-150 lg-pb-100"
-          style={backImg2}
+          // style={backImg2}
         >
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-xl-5 col-lg-6 wow fadeInLeft">
-                <div className="title-one details-meta">
-                  <div className="upper-title">About Us</div>
-                  <h3>
-                    Transforming Foot Care with Cutting-Edge Pressure Analysis
-                    Technology
-                  </h3>
-                </div>
+              <div className="col-lg-6 wow fadeInLeft text-feature-seven">
                 <p className="text-lg">
-                  PiStarTech Private Limited develops innovative solutions like
-                  the Diabetic PodiaScan Mat (DiaPS Mat), providing precise
-                  plantar pressure analysis for improved foot health
-                  diagnostics. Our technology offers a reliable, cost-effective
-                  tool to support medical professionals and enhance patient care
-                  through accurate, real-time data.
+                  Founded in 2023 by visionary entrepreneurs Arjun Mittal and
+                  Ishank Bansal, Envinova Smartech is redefining how technology
+                  integrates into outdoor spaces. Headquartered in Chandigarh,
+                  we design and build Smart Solar Huts—innovative off-grid
+                  solutions that combine cutting-edge solar technology with
+                  modern amenities, including:
+                </p>
+                <ul className="p-0">
+                  <li>Lighting solutions</li>
+                  <li>Wi-Fi connectivity</li>
+                  <li>Emergency health services</li>
+                  <li>Mobile and laptop charging</li>
+                  <li>And other essential conveniences</li>
+                </ul>
+                <p className="text-lg">
+                  Our mission is to make solar energy an integral part of
+                  everyday life by creating smarter, greener spaces that inspire
+                  seamless engagement with technology.
                 </p>
                 <div className="d-inline-flex flex-wrap align-items-center">
                   <Link href="/about-us" className="btn-four mt-15 me-4">
@@ -88,14 +97,9 @@ const TextFeatureHome = ({ style_2 = false }: { style_2?: boolean }) => {
                   </Link> */}
                 </div>
               </div>
-              <div className="col-xl-7 col-lg-6 wow fadeInRight">
-                {/* <Image src={ab} alt="About us" className="w-100"></Image> */}
-                <div className="media-list-item ms-auto pe-xxl-5 pe-4 ps-xxl-5 ps-4 pb-35 md-mt-60 d-flex align-items-end">
-                  <ul className="style-none">
-                    <li>IT Consulting</li>
-                    <li>Workforce Solutions </li>
-                    <li>Digital Growth Services</li>
-                  </ul>
+              <div className="col-lg-6 wow fadeInRight">
+                <div className="p-4">
+                  <Image src={campa} alt="About us" layout="responsive"></Image>
                 </div>
               </div>
             </div>
@@ -103,7 +107,7 @@ const TextFeatureHome = ({ style_2 = false }: { style_2?: boolean }) => {
         </div>
       )}
       {style_2 && (
-        <div 
+        <div
         // style={backImg}
         // style={{background:"#292e31"}}
         >
@@ -114,10 +118,21 @@ const TextFeatureHome = ({ style_2 = false }: { style_2?: boolean }) => {
                   {/* <div className="upper-title">About Us</div> */}
                   {/* <h2 style={{ color: "#62c087" }}>By the Numbers</h2> */}
                 </div>
-                <div className="col-md-4 col-6" style={{background:"#172a44",border:"1px solid gray"}}>
-                  <CounterBlock num={10} text="K+" title="Total Installations" delay="2" />
+                <div
+                  className="col-md-4 col-6"
+                  style={{ background: "#172a44", border: "1px solid gray" }}
+                >
+                  <CounterBlock
+                    num={10}
+                    text="K+"
+                    title="Total Installations"
+                    delay="2"
+                  />
                 </div>
-                <div className="col-md-4 col-6" style={{background:"#172a44",border:"1px solid gray"}}>
+                <div
+                  className="col-md-4 col-6"
+                  style={{ background: "#172a44", border: "1px solid gray" }}
+                >
                   <CounterBlock
                     num={25}
                     text="K+"
@@ -127,7 +142,10 @@ const TextFeatureHome = ({ style_2 = false }: { style_2?: boolean }) => {
                     // decimal={true}
                   />
                 </div>
-                <div className="col-md-4 col-6" style={{background:"#172a44",border:"1px solid gray"}}>
+                <div
+                  className="col-md-4 col-6"
+                  style={{ background: "#172a44", border: "1px solid gray" }}
+                >
                   <CounterBlock
                     num={200}
                     text="K+"

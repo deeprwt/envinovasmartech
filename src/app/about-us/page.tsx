@@ -69,11 +69,13 @@ const AboutUsPage = () => {
             style_2={true}
           /> */}
           {/* breadcrumb end */}
+          <TextFeatureAbout />
+          {/* <TextFeatureHome /> */}
 
           <TextFeatureHome style_2={true} />
 
           {/* text feature one area start */}
-          {/* <TextFeatureAbout /> */}
+
           {/* text feature one area end */}
 
           {/* text feature one area start */}
