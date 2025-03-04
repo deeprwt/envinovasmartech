@@ -27,14 +27,18 @@ import FaqSolutionsThree from "@/components/faq/faq-section-three";
 import HeaderSix from "@/layout/header/header-six";
 import AwardsSection from "@/components/company/awards-section";
 import LocationTabsData from "@/components/tabs/location-taps";
+import AboutTabsData from "@/components/tabs/about-tap";
+import ProudctFeatureSection from "@/components/block-feature/product-feature";
 
 export const metadata = {
   title: "About PiStar | Foot Scan with High-Accuracy Sensors",
-  description:"Learn about PiStar's innovative Foot Scan Podiascan and high-accuracy pressure sensors, dedicated to providing precise podiatric insights for optimal foot health.",
-  keywords:"Foot Scan (Podiascan), high accuracy pressure sensor",
+  description:
+    "Learn about PiStar's innovative Foot Scan Podiascan and high-accuracy pressure sensors, dedicated to providing precise podiatric insights for optimal foot health.",
+  keywords: "Foot Scan (Podiascan), high accuracy pressure sensor",
   openGraph: {
     title: "Advanced Foot Systems Podiatry | Diabetic Foot Care Solutions",
-    description: "Learn about PiStar's innovative Foot Scan Podiascan and high-accuracy pressure sensors, dedicated to providing precise podiatric insights for optimal foot health.",
+    description:
+      "Learn about PiStar's innovative Foot Scan Podiascan and high-accuracy pressure sensors, dedicated to providing precise podiatric insights for optimal foot health.",
     images: [
       {
         url: "@/assets/images/logo/logo.png", // URL of the image
@@ -56,7 +60,7 @@ const AboutUsPage = () => {
         {/* header end */}
         <main>
           {/* breadcrumb start */}
-            <HeroVideoTwo />
+          <HeroVideoTwo />
           {/* <BreadcrumbOne
             title="About Us"
             subtitle="Navigating Your Financial Growth With Experience & Insightful Solutions."
@@ -66,15 +70,17 @@ const AboutUsPage = () => {
           /> */}
           {/* breadcrumb end */}
 
+          <TextFeatureHome style_2={true} />
+
           {/* text feature one area start */}
-          <TextFeatureAbout />
+          {/* <TextFeatureAbout /> */}
           {/* text feature one area end */}
 
           {/* text feature one area start */}
-          <TextFeatureAbout style_2={true} />
+          {/* <TextFeatureAbout style_2={true} /> */}
           {/* text feature one area end */}
 
-          <BlockFeatureAbout style_2={true}  />
+          <BlockFeatureAbout style_2={true} />
 
           {/* block feature one area start */}
           {/* <BlockFeatureOne style_2={true} /> */}
@@ -92,23 +98,10 @@ const AboutUsPage = () => {
           {/* <FeedbackOne cls="top-border pt-80 pb-80" /> */}
           {/* feedback one end */}
 
-          {/* partner logo start */}
-          <div className="partner-logo-one pt-80 lg-pt-40 pb-80 lg-pb-40">
-            <div className="container">
-            <div className="title-one details-meta mb-40 lg-mb-10 wow fadeInUp">
-                <h3 className="text-white">Supported by: </h3>
-              </div>
-              <PartnersSliderOne />
-            </div>
-          </div>
-          {/* partner logo end */}
 
-          {/* <FaqSolutionsThree 
-                      title="Frequently Asked Questions"
-                      para=""
-                      page="companyfaq"
-          /> */}
-          
+          <ProudctFeatureSection />
+
+          <AboutTabsData />
 
           {/* team three start */}
           <TeamSectionThree />
@@ -131,7 +124,7 @@ const AboutUsPage = () => {
           {/* news letter start */}
           {/* <NewsletterBanner /> */}
           {/* news letter end */}
-          <LocationTabsData />
+          {/* <LocationTabsData /> */}
           <AwardsSection />
         </main>
 

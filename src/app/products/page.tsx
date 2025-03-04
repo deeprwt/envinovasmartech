@@ -11,6 +11,7 @@ import NewsletterBanner from "@/components/newsletter/newsletter-banner";
 import FooterOne from "@/layout/footer/footer-one";
 import BlogList from "@/components/dynamic/bloglist";
 import HeaderSix from "@/layout/header/header-six";
+import BlockFeatureFive from "@/components/block-feature/block-feature-five";
 
 export const metadata: Metadata = {
   title: "Blog Page",
@@ -39,6 +40,8 @@ const BlogPage = () => {
           {/* <BlogListArea /> */}
           <BlogList />
           {/* blog list area end */}
+
+          <BlockFeatureFive number={8} />
 
           {/* fancy banner three start */}
           {/* <FancyBannerThree /> */}

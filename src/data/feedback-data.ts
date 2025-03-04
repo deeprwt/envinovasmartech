@@ -18,34 +18,34 @@ export const feed_back_two:ITestimonial[] = [
   {
     id:1,
     user:user_1,
-    name:'James Bond.',
-    location:'Thailad',
-    desc:'We are absolutely thrilled with the services provided by Babun! Their team went above and beyond to transform our outdated website into a stunning, user-friendly masterpiece.',
+    name:'Mr. Rajesh Kumar',
+    location:'CEO, GreenTech Innovations',
+    desc:`As cities evolve, there is an increasing need for outdoor spaces that are not only functional but also sustainable. Envinova's solar-powered solutions are the perfect answer, combining smart design with renewable energy to create public spaces that enhance both convenience and environmental impact`,
     rating:5
   },
   {
     id:2,
     user:user_2,
-    name:'James Bond.',
-    location:'Thailad',
-    desc:'It has been an absolute pleasure working with Babun on our brand identity overhaul. Their ability to capture the essence of our culinary vision and translate it into a visual identity has been commendable.',
+    name:'Mr. Pawandeep Singh Anand',
+    location:' MD, ALP Nishikawa',
+    desc:`With the rise in mobile device usage, providing charging stations in outdoor spaces is no longer optional. Envinova's solar huts are the ideal solution, offering a sustainable way to power up while making a significant contribution to green energy.`,
     rating:4
   },
   {
     id:3,
     user:user_1,
-    name:'Mark Smith',
-    location:'United state',
-    desc:'It has been an absolute pleasure working with Babun on our brand identity overhaul. Their ability to capture the essence of our culinary vision and translate it into a visual identity has been commendable.',
+    name:'Prof. YP Verma',
+    location:'Registrar, Panjab University',
+    desc:'I have had the pleasure of using and observing this product, and I can confidently say that it has the potential to revolutionize the industry.',
     rating:5
   },
   {
     id:4,
     user:user_2,
-    name:'Jon Doe',
-    location:'Dubai',
-    desc:'Babun thumbs up to the team! Their personalized approach to fitness training has been a breath of fresh air. The trainers are not only knowledgeable but also genuinely invested in their clients well-being',
-    rating:3
+    name:'Hans-Jörg Hörtnagl',
+    location:'Trade Commissioner, Advantage Austria',
+    desc:`It's a step forward to create smart cities and enhance public comfort.`,
+    rating:4
   },
 ]
 

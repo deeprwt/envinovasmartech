@@ -41,13 +41,13 @@ function CounterBlock({
       className="counter-block-two mt-35 mb-35 wow fadeInUp"
       data-wow-delay={`0.${delay}s`}
     >
-      <div className="main-count fw-500 d-flex" style={{ color: "#62c087" }}>
+      <div className="main-count justify-content-center fw-500 d-flex" style={{ color: "#62c087" }}>
         {prev_text && prev_text}
         <span className="counter">
           <CounterUp number={num} text={text} decimal={decimal} />
         </span>
       </div>
-      <p className="m0 text-md text-white" style={{width:"80%"}}>{title}</p>
+      <p className="m0 text-md text-white text-center">{title}</p>
     </div>
   );
 }
@@ -104,35 +104,35 @@ const TextFeatureHome = ({ style_2 = false }: { style_2?: boolean }) => {
       )}
       {style_2 && (
         <div 
-        style={backImg}
+        // style={backImg}
         // style={{background:"#292e31"}}
         >
-          <div className="container">
+          <div className="">
             <div className="counter-wrapper pt-80 pb-80 lg-mt-20 lg-mb-20">
               <div className="row">
                 <div className="title-one details-meta">
                   {/* <div className="upper-title">About Us</div> */}
-                  <h2 style={{ color: "#62c087" }}>By the Numbers</h2>
+                  {/* <h2 style={{ color: "#62c087" }}>By the Numbers</h2> */}
                 </div>
-                <div className="col-md-4 col-6">
-                  <CounterBlock num={28} text="M+" title="Annual number of people in the India who develop pressure ulcers." />
+                <div className="col-md-4 col-6" style={{background:"#172a44",border:"1px solid gray"}}>
+                  <CounterBlock num={10} text="K+" title="Total Installations" delay="2" />
                 </div>
-                <div className="col-md-4 col-6">
+                <div className="col-md-4 col-6" style={{background:"#172a44",border:"1px solid gray"}}>
                   <CounterBlock
-                    num={1.8}
-                    text="M"
-                    title="Number of Hospital Acquired Pressure Injuries (HAPIs) related patient deaths in the India per year."
+                    num={25}
+                    text="K+"
+                    title="Active Users"
                     // prev_text="$"
-                    delay="1"
-                    decimal={true}
+                    delay="2"
+                    // decimal={true}
                   />
                 </div>
-                <div className="col-md-4 col-6">
+                <div className="col-md-4 col-6" style={{background:"#172a44",border:"1px solid gray"}}>
                   <CounterBlock
-                    num={20}
-                    text="%"
-                    title="Of HAPIs are attributed to the operating room."
-                    prev_text="~"
+                    num={200}
+                    text="K+"
+                    title="Total Revenue Earned"
+                    prev_text="$"
                     delay="2"
                   />
                 </div>

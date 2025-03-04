@@ -379,7 +379,7 @@
         z-index: 1;
     }
     .nav {
-        background: #F0F5F3;
+        background: #f6f6f6;
         border-radius: 40px;
         .nav-item {
             width: 50%;
@@ -393,6 +393,7 @@
                 color: #839B8F;
                 &.active {
                     color: $color-two;
+                    background: #f6f6f6 !important;
                     border-color: $color-two;
                 }
             }

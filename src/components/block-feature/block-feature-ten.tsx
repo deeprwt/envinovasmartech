@@ -59,7 +59,7 @@ const BlockFeatureTen = () => {
               >
                 <div className="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
                   <div className="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
-                    <Image src={s.icon} alt="icon" className="lazy-img" />
+                    <Image src={s.icon} alt="icon" layout="responsive" className="lazy-img" />
                   </div>
                   <div className="text">
                     <h4 className="fw-bold mb-20 sm-mb-10">{s.title}</h4>

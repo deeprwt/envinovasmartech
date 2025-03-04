@@ -88,7 +88,7 @@ export default function HomePage() {
 
           {/* hero banner end */}
 
-          <BlockFeatureFive />
+          <BlockFeatureFive number={8} />
           {/* <BlockFeatureThree /> */}
 
           {/* <FancyBannerSix /> */}
@@ -123,21 +123,29 @@ export default function HomePage() {
                       <div className="title-one details-meta">
                         {/* <div className="upper-title">About Us</div> */}
                         <h2 className="text-white">
-                          Have a project or a business? <br />
-                          Connect to us! <br />
-                          We will partner your growth...
+                          Have a Project? Connect With Us
                         </h2>
                       </div>
                       <p className="text-lg mt-45 lg-mt-30 mb-35 lg-mb-20 paracolor">
-                        Interested in renewables, smart cities and urban
-                        development? <br />
-                        Let&apos;s partner up!
+                        Beyond our listed offerings, we specialize in providing
+                        <b>custom solar solutions</b> to meet diverse needs.
+                        From transforming outdoor spaces with innovative solar
+                        integrations to handling large-scale{" "}
+                        <b>C&I (Commercial & Industrial) projects</b>, we are
+                        your{" "}
+                        <b>one-stop destination for solar-powered solutions</b>.
+                      </p>
+                      <p className="text-lg mt-45 lg-mt-30 mb-35 lg-mb-20 paracolor">
+                        Whether you need bespoke solar installations,
+                        eco-friendly infrastructure, or public convenience
+                        projects, we bring expertise, creativity, and
+                        sustainable energy innovation to every endeavor.
                       </p>
                       <Link
-                        href="/project-details-v1"
+                        href="/contact"
                         className="btn-two icon-link"
                       >
-                        <span className="text-white">Full Case Study</span>
+                        <span className="text-white">Let&apos;s Collaborate</span>
                         <div className="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
                           <i className="bi bi-arrow-right"></i>
                         </div>

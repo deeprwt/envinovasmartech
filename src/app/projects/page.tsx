@@ -11,6 +11,8 @@ import BreadcrumbOne from "@/components/breadcrumb/breadcrumb-one";
 import blog_bg from "@/assets/images/media/NewsBanner.png";
 import NewsList from "@/components/dynamic/newsdesigndata/newslist";
 import HeaderSix from "@/layout/header/header-six";
+import BlockFeatureFive from "@/components/block-feature/block-feature-five";
+import FeedBackTap from "@/components/tabs/feedback-tap";
 
 export const metadata: Metadata = {
   title: "News & Media",
@@ -39,6 +41,9 @@ const BlogGridPage = () => {
           {/* <NewsGridArea /> */}
           <NewsList />
           {/* blog grid area end */}
+
+          {/* <BlockFeatureFive number={8} /> */}
+          <FeedBackTap />
 
           {/* fancy banner three start */}
           {/* <FancyBannerThree /> */}

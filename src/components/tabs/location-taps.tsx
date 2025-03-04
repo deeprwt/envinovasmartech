@@ -18,10 +18,12 @@ function AddressBlock({
   icon,
   title,
   subtitle,
+  para,
 }: {
   icon: StaticImageData;
   title: string;
   subtitle: string;
+  para: string;
 }) {
   return (
     <div className="address-block-one text-center mb-40">
@@ -30,6 +32,7 @@ function AddressBlock({
       </div>
       <h5 className="title">{title}</h5>
       <p dangerouslySetInnerHTML={{ __html: subtitle }}></p>
+      <h5 className="title">{para}</h5>
     </div>
   );
 }
@@ -38,7 +41,7 @@ const LocationTabsData = () => {
   return (
     <>
       {/* starts from here  */}
-      <div className="text-feature-one service-details pt-40 lg-pt-80">
+      {/* <div className="text-feature-one service-details pt-80 lg-pt-80">
         <div className="container">
           <div className="row align-items-center details-meta">
             <div className="title-one">
@@ -49,41 +52,10 @@ const LocationTabsData = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Ends from here  */}
       <div className="faq-section-three  pb-50 lg-pb-80 ">
         <div className="container">
-          <nav>
-            <div
-              className="nav m-auto nav-tabs justify-content-center light-bg py-2 mw-60"
-              id="nav-tab"
-              role="tablist"
-              style={maxcontent}
-            >
-              <button
-                className="nav-link active"
-                data-bs-toggle="tab"
-                data-bs-target="#nav-oracle"
-                type="button"
-                role="tab"
-                aria-selected="true"
-                tabIndex={-1}
-              >
-                Our Mission
-              </button>
-              <button
-                className="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#nav-finacle"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                tabIndex={-1}
-              >
-                Our Vision
-              </button>
-            </div>
-          </nav>
           <div className="tab-content mt-20 lg-mt-40">
             {/* tab 1start form her  */}
             <div
@@ -96,22 +68,30 @@ const LocationTabsData = () => {
                 <div className="row justify-content-center">
                   {/*----------------------------------------Adding address IND div staring--------------------------------*/}
 
-                  <div className="col-md-10 pt-30 wow fadeInUp">
-                    <div className="address-block-one text-center mb-40">
-                      <div className="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
-                        <Image src={icon_1} alt="icon" className="lazy-img" />
-                      </div>
-                      <h5 className="title">Purpose of Our Business</h5>
-                      <p>
-                        Our vision is to revolutionize infrastructure by
-                        creating modern, green, and sustainable solutions that
-                        elevate outdoor experiences while fostering a positive
-                        environmental impact. We are committed to making public
-                        conveniences universally accessible, regardless of
-                        location, through innovative solutions that operate
-                        independently of traditional power sources.
-                      </p>
-                    </div>
+                  <div className="col-md-4 pt-30 wow fadeInUp">
+                    <AddressBlock
+                      icon={icon_1}
+                      title="Visit Us"
+                      subtitle="Cabin 1, E-313, Sector 75, Sahibzada Ajit Singh Nagar, Punjab 160055"
+                      para="Punjab"
+                    />
+                  </div>
+                  <div className="col-md-4 pt-30 wow fadeInUp">
+                    <AddressBlock
+                      icon={icon_2}
+                      title="Call Us"
+                      subtitle="Something important? We are just a call away! "
+                      para="+91 9872230560"
+                    />
+                  </div>
+                  <div className="col-md-4 pt-30 wow fadeInUp">
+                    <AddressBlock
+                      icon={icon_3}
+                      title="Contact Us "
+                      subtitle="
+                          If there is anything we can help you with just drop a mail at "
+                      para="care@envinovasmartech.com"
+                    />
                   </div>
 
                   {/*-------------------------------------------Adding address IND div End-------------------------- */}
@@ -119,57 +99,6 @@ const LocationTabsData = () => {
               </div>
             </div>
             {/* tab 1end form her  */}
-
-            {/* tab 2start form her  */}
-            <div
-              className="tab-pane fade"
-              id="nav-finacle"
-              role="tabpanel"
-              tabIndex={0}
-            >
-              <div className="accordion accordion-style-one" id="accordionTwo">
-                <div className="row justify-content-center">
-                  {/*----------------------------------------Adding address IND div staring--------------------------------*/}
-                  <div className="col-md-5 pt-30">
-                    <div className="address-block-one text-center mb-40">
-                      <div className="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
-                        <Image src={icon_1} alt="icon" className="lazy-img" />
-                      </div>
-                      <h5 className="title">Purpose of Our Business</h5>
-                      <p>
-                        Our vision is to revolutionize infrastructure by
-                        creating modern, green, and sustainable solutions that
-                        elevate outdoor experiences while fostering a positive
-                        environmental impact. We are committed to making public
-                        conveniences universally accessible, regardless of
-                        location, through innovative solutions that operate
-                        independently of traditional power sources.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-md-5 pt-30">
-                    <div className="address-block-one text-center mb-40">
-                      <div className="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
-                        <Image src={icon_1} alt="icon" className="lazy-img" />
-                      </div>
-                      <h5 className="title">Purpose of Our Business</h5>
-                      <p>
-                        Our vision is to revolutionize infrastructure by
-                        creating modern, green, and sustainable solutions that
-                        elevate outdoor experiences while fostering a positive
-                        environmental impact. We are committed to making public
-                        conveniences universally accessible, regardless of
-                        location, through innovative solutions that operate
-                        independently of traditional power sources.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/*-------------------------------------------Adding address IND div End-------------------------- */}
-                </div>
-              </div>
-            </div>
-            {/* tab 2end form her  */}
 
             {/* tab 5end form her  */}
             {/* <div

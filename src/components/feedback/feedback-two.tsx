@@ -50,11 +50,11 @@ const FeedbackTwo = () => {
             <div key={i} className="item">
               <div className="feedback-block-two tran3s">
                 <div className="d-flex align-items-center">
-                  <Image
+                  {/* <Image
                     src={f.user!}
                     alt="user"
                     className="avatar rounded-circle"
-                  />
+                  /> */}
                   <div className="ps-3">
                     <div className="name fw-bold">{f.name}</div>
                     <p className="m0">{f.location}</p>

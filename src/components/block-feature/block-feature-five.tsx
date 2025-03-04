@@ -7,8 +7,10 @@ import arrow from "@/assets/images/icon/icon_09.svg";
 import icon from "@/assets/images/icon/icon_27.svg";
 import shape from "@/assets/images/shape/shape_06.svg";
 
-const BlockFeatureFive = () => {
+const BlockFeatureFive = ({ number = 0 }) => {
   const service_items = feature_data.filter((s) => s.page === "home");
+  const displayed_items = number > 0 ? service_items.slice(0, number) : service_items;
+  
   return (
     <div className="block-feature-five light-bg position-relative pt-120 lg-pt-80 pb-150 lg-pb-80 service-details">
       <div className="container">
@@ -22,8 +24,7 @@ const BlockFeatureFive = () => {
           </div>
 
           <div className="row">
-            
-            {service_items.map((s, i) => (
+            {displayed_items.map((s, i) => (
               <div
                 key={i}
                 className="col-xl-3 col-md-3 d-flex wow fadeInUp"
@@ -34,15 +35,9 @@ const BlockFeatureFive = () => {
                   className="card-style-seven text-center vstack tran3s w-100 mt-30"
                 >
                     <div className="icon tran3s rounded-circle d-flex align-items-center justify-content-center m-auto">
-                      <Image src={s.icon} alt="icon" className="lazy-img" />
+                      <Image src={s.icon} alt="icon" layout="responsive" className="lazy-img" />
                     </div>
                     <h4 className="fw-bold mt-20 md-mt-20 mb-20 text-capitalize">{s.title}</h4>
-                    {/* <Link
-                      href="/service-v2"
-                      className="arrow-btn tran3s m-auto stretched-link"
-                    >
-                      <Image src={arrow} alt="icon" className="lazy-img" />
-                    </Link> */}
                 </Link>
               </div>
             ))}

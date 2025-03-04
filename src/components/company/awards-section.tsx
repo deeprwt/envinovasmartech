@@ -57,7 +57,7 @@ const imgStyle = {
 };
 const AwardsSection = () => {
   return (
-    <div className="service-details mt-80 lg-mt-80">
+    <div className="service-details mt-40 lg-mt-50">
       <div className="container">
         <div className="row">
           <div className="col-xxl-12 col-lg-12">

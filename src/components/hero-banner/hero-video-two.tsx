@@ -50,7 +50,7 @@ const HeroVideoTwo = () => {
                 className="text-xl pt-35 pb-35 wow fadeInUp text-white"
                 data-wow-delay="0.1s"
               >
-                Howering the fututre
+                Pioneering Smart Solar Solutions for a Sustainable Future
               </p>
               {/* <div className="d-inline-flex flex-wrap align-items-center">
                 <Link href="/about-us" className="btn-four mt-15 me-4">
