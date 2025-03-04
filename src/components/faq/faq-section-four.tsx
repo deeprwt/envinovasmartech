@@ -88,7 +88,7 @@ const FaqSectionFour = () => {
             <div className="title-one mb-40">
               <h2>Our Foundational Inspiration</h2>
               <p className="text-lg pt-15 lg-pt-10">
-                At PiStarTech, our journey began with a passion for innovation
+                AtEnvinoa Tech, our journey began with a passion for innovation
                 in health technology and a commitment to improving lives.
                 Inspired by the intricate complexity of human movement, we set
                 out to create solutions that bridge the gap between cutting-edge
@@ -100,7 +100,7 @@ const FaqSectionFour = () => {
                 enhanced performance, driving us to continuously push the
                 boundaries of what&#39;s possible in the realm of foot health and
                 biomechanics. Through relentless innovation, collaboration, and
-                an unwavering dedication to quality, PiStarTech is redefining
+                an unwavering dedication to quality,Envinoa Tech is redefining
                 how we approach foot function and mobility for a healthier
                 future.
               </p>

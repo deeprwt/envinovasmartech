@@ -343,7 +343,7 @@ const faq_data: IFaq[] = [
   },
   {
     id: 52,
-    title: "What is PiStarTech?",
+    title: "What isEnvinoa Tech?",
     desc: "PiStarTech is a leading provider of innovative diagnostic solutions focused on improving healthcare through advanced technology. Our flagship product, Podiascanner Mat, is designed for diabetic foot care and biomechanical analysis, helping both patients and healthcare professionals achieve better outcomes.",
     page:'companyfaq'
   },
@@ -361,13 +361,13 @@ const faq_data: IFaq[] = [
   },
   {
     id: 55,
-    title: "How can I purchase or learn more about PiStarTech products?",
-    desc: "To learn more about our products or make a purchase, visit our website at PiStarTech. You can also contact our sales team through the contact form on our website or by reaching out to us via email at sales@pistar.tech.",
+    title: "How can I purchase or learn more aboutEnvinoa Tech products?",
+    desc: "To learn more about our products or make a purchase, visit our website atEnvinoa Tech. You can also contact our sales team through the contact form on our website or by reaching out to us via email at sales@pistar.tech.",
     page:'companyfaq'
   },
   {
     id: 56,
-    title: "What are the warranty and service options for PiStarTech products?",
+    title: "What are the warranty and service options forEnvinoa Tech products?",
     desc: "PiStarTech products come with a standard warranty that covers manufacturing defects and malfunctions under normal use. For detailed warranty information and terms, please refer to the warranty policy available on our website or contact our customer service team. Additionally, we offer various service plans, including extended warranties and maintenance options, to ensure that your products remain in optimal condition. ",
     page:'companyfaq'
   },

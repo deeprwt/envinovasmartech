@@ -44,7 +44,7 @@ const TeamDetailsArea = () => {
                       ></Image>
                     </Link>
                   </h2>
-                  <div className="post pb-5">CEO, PiStar Tech</div>
+                  <div className="post pb-5">CEO,Envinoa  Tech</div>
                   {/* <h6 className="fw-bold">About Me</h6> */}
                   <p className="m-0">
                     I have 5 years of hands-on experience and expertise in the

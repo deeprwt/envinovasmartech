@@ -119,7 +119,7 @@ const HeroBannerTwo = () => {
                   className="text-xl pt-35 pb-35 wow fadeInUp text-white"
                   data-wow-delay="0.1s"
                 >
-                  Enhance performance with PiStarTech&apos;s advanced flexible pressure sensors tailored for medical diagnostics
+                  Enhance performance withEnvinoa Tech&apos;s advanced flexible pressure sensors tailored for medical diagnostics
                 </p>
                 <div className="d-inline-flex flex-wrap align-items-center">
                   <Link href="/about-us" className="btn-four mt-15 me-4">

@@ -54,13 +54,13 @@ const backImg2 = {
 export const metadata = {
   title: "Advanced Foot Systems Podiatry | Diabetic Foot Care Solutions",
   description:
-    "Discover PiStarTech flexible pressure sensor technology designed for diabetic foot care, providing accurate podiatry insights to enhance foot health and prevent complications.",
+    "DiscoverEnvinoa Tech flexible pressure sensor technology designed for diabetic foot care, providing accurate podiatry insights to enhance foot health and prevent complications.",
   keywords:
     "foot systems podiatry, flexible pressure sensor, Diabetic Foot Care ",
   openGraph: {
     title: "Advanced Foot Systems Podiatry | Diabetic Foot Care Solutions",
     description:
-      "Discover PiStarTech flexible pressure sensor technology designed for diabetic foot care, providing accurate podiatry insights to enhance foot health and prevent complications.",
+      "DiscoverEnvinoa Tech flexible pressure sensor technology designed for diabetic foot care, providing accurate podiatry insights to enhance foot health and prevent complications.",
     images: [
       {
         url: "@/assets/images/logo/logo.png", // URL of the image

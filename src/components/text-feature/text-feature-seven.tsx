@@ -61,7 +61,7 @@ const TextFeatureSeven = () => {
                 </h3>
               </div>
               <p className="text-lg mb-40 lg-mb-30">
-                PiStarTech Private Limited develops innovative solutions like
+               Envinoa Tech Private Limited develops innovative solutions like
                 the <b>Diabetic PodiaScan Mat (Podiascanner Mat)</b>, providing precise
                 plantar pressure analysis for improved foot health diagnostics.
                 Our technology offers a reliable, cost-effective tool to support

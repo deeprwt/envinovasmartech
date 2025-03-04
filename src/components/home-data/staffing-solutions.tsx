@@ -53,7 +53,7 @@ const StaffingSolutions = () => {
               <h2>Leveraging Familiar Techniques with the Podiascanner Mat</h2>
             </div>
             <p className="text-lg mt-40 lg-mt-30 mb-50">
-              PiStarTech Private Limited ensures that the Podiascanner Mat integrates
+             Envinoa Tech Private Limited ensures that the Podiascanner Mat integrates
               smoothly into the medical professional&apos;s existing knowledge and
               workflow. Much like familiar diagnostic tools, the Podiascanner Mat
               builds on well-known foot assessment methods while providing

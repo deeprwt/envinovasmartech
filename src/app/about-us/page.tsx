@@ -31,14 +31,14 @@ import AboutTabsData from "@/components/tabs/about-tap";
 import ProudctFeatureSection from "@/components/block-feature/product-feature";
 
 export const metadata = {
-  title: "About PiStar | Foot Scan with High-Accuracy Sensors",
+  title: "AboutEnvinoa  | Foot Scan with High-Accuracy Sensors",
   description:
-    "Learn about PiStar's innovative Foot Scan Podiascan and high-accuracy pressure sensors, dedicated to providing precise podiatric insights for optimal foot health.",
+    "Learn aboutEnvinoa 's innovative Foot Scan Podiascan and high-accuracy pressure sensors, dedicated to providing precise podiatric insights for optimal foot health.",
   keywords: "Foot Scan (Podiascan), high accuracy pressure sensor",
   openGraph: {
     title: "Advanced Foot Systems Podiatry | Diabetic Foot Care Solutions",
     description:
-      "Learn about PiStar's innovative Foot Scan Podiascan and high-accuracy pressure sensors, dedicated to providing precise podiatric insights for optimal foot health.",
+      "Learn aboutEnvinoa 's innovative Foot Scan Podiascan and high-accuracy pressure sensors, dedicated to providing precise podiatric insights for optimal foot health.",
     images: [
       {
         url: "@/assets/images/logo/logo.png", // URL of the image
