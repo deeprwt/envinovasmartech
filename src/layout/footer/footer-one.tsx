@@ -16,7 +16,13 @@ const FooterOne = () => {
   return (
     <>
       {/* <NewsletterBannerTwo /> */}
-      <div className="footer-one" style={{ background: "radial-gradient(56.79% 56.79% at 50% 50%, rgb(139, 242, 161) 0%, rgb(83, 188, 105) 0%, rgb(10, 116, 95) 100%)" }}>
+      <div
+        className="footer-one"
+        style={{
+          background:
+            "radial-gradient(56.79% 56.79% at 50% 50%, rgb(139, 242, 161) 0%, rgb(83, 188, 105) 0%, rgb(10, 116, 95) 100%)",
+        }}
+      >
         <div className="container">
           <div className="inner-wrapper">
             <div className="row justify-content-between">
@@ -36,8 +42,14 @@ const FooterOne = () => {
                 <h4 className="text-white lh-sm mb-35">
                   Head office <br /> <br />
                   <span className="opacity-50 mt-2">
-                    Cabin 1, E-313, Sector 75, Sahibzada Ajit Singh Nagar,
-                    Punjab 160055
+                    Cabin -1, Plot E-313, Sector 75, Mohali 160055
+                  </span>
+                </h4>
+                <h4 className="text-white lh-sm mb-35">
+                  Manufacturing Facility <br /> <br />
+                  <span className="opacity-50 mt-2">
+                    First Floor, Plot 53- 10 marla, Industrial Area Phase 2
+                    Chandigarh 160002
                   </span>
                 </h4>
                 {/* <p className="text-white lh-sm mb-35 ">
@@ -72,17 +84,13 @@ const FooterOne = () => {
                     <Link href="/product/podiascanner">Product 2</Link>
                   </li>
                   <li>
-                    <Link href="/product/footscan">
-                      Product 3
-                    </Link>
+                    <Link href="/product/footscan">Product 3</Link>
                   </li>
                   <li>
                     <Link href="/product/pressure-mat">Product 4</Link>
                   </li>
                   <li>
-                    <Link href="/product/foot-pressure-mapping">
-                     Product 5
-                    </Link>
+                    <Link href="/product/foot-pressure-mapping">Product 5</Link>
                   </li>
                 </ul>
               </div>
@@ -96,10 +104,10 @@ const FooterOne = () => {
                     <Link href="/about-us">About Us</Link>
                   </li>
                   <li>
-                    <Link href="/contact">Contact Us</Link>
+                    <Link href="/products">Products</Link>
                   </li>
                   <li>
-                    <Link href="/article">Article</Link>
+                    <Link href="/article">Media</Link>
                   </li>
                   {/* <li>
                   <Link href="/internship">Internship Program</Link>
@@ -110,10 +118,19 @@ const FooterOne = () => {
                 <h5 className="footer-title">Get In Touch</h5>
                 <ul className="footer-nav-link style-none">
                   <li>
-                    <Link href="mailto:info@pistar.tech">care@envinovasmartech.com</Link>
+                    <Link href="mailto:info@pistar.tech">
+                      envinovasmartech@gmail.com
+                    </Link>
                   </li>
                   <li>
-                    <Link href="tel:9908127810">+91 9908127810</Link>
+                    <Link href="tel:9872230560">+91 9872230560</Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="tel:9877262993"
+                    >
+                      +91 9877262993
+                    </Link>
                   </li>
                 </ul>
                 <ul className="style-none d-flex align-items-center pt-20 social-icon">

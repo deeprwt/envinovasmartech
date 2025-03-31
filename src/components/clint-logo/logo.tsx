@@ -5,11 +5,19 @@ import Slider from "react-slick";
 // import 'slick-carousel/slick/slick.css';
 // import 'slick-carousel/slick/slick-theme.css';
 
-import img1 from "@/assets/images/logo/clints/solar1.png"
-import img2 from "@/assets/images/logo/clints/solar2.png"
-import img3 from "@/assets/images/logo/clints/solar3.png"
-import img5 from "@/assets/images/logo/clints/soalr4.png"
-import img4 from "@/assets/images/logo/clints/soalr5.jpeg"
+import img1 from "@/assets/images/logo/clints/partners/2018040211.png"
+import img2 from "@/assets/images/logo/clints/partners/ADA Logo New2.png"
+import img3 from "@/assets/images/logo/clints/partners/Campa_Cola_logo.png"
+import img4 from "@/assets/images/logo/clints/partners/Logo.png"
+import img5 from "@/assets/images/logo/clints/partners/MNRE_India.svg"
+import img6 from "@/assets/images/logo/clints/partners/UIET_logo.png"
+import img7 from "@/assets/images/logo/clints/partners/What.jpg"
+import img8 from "@/assets/images/logo/clints/partners/alp-nishikawa.png"
+import img9 from "@/assets/images/logo/clints/partners/ifm pic.jpeg"
+import img10 from "@/assets/images/logo/clints/partners/image.jpg"
+import img11 from "@/assets/images/logo/clints/partners/logo-Neyfhfgs.jpg"
+import img12 from "@/assets/images/logo/clints/partners/logo.webp"
+
 
 
 
@@ -110,7 +118,7 @@ const slider_setting2 = {
   };
 
 // slider logos
-const slider_logos:StaticImageData[] = [img1, img2, img3, img4, img5, img1, img2, img3, img4, img5,];
+const slider_logos:StaticImageData[] = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12,];
 // const slider_logos2:StaticImageData[] = [img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23,];
 
 const ClintLogo = () => {
@@ -120,7 +128,8 @@ const ClintLogo = () => {
             <div className="">
                     <div className="title-one text-center mb-60 details-meta">
                         {/* <div className="upper-title"></div> */}
-                        <h2>Our Client
+                        <h2>Trusted by industry leaders, and government bodies driving a sustainable
+                        future.
                         </h2>
                     </div>
                 <Slider {...slider_setting} className="partner-slider-one green-boader">

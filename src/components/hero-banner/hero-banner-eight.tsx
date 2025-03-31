@@ -72,18 +72,18 @@ const HeroBannerEight = () => {
                 className="text-xl pt-35 pb-35 wow fadeInUp text-white"
                 data-wow-delay="0.1s"
               >
-                Discover advanced solar-powered solutions designed to transform
-                public and private spaces. From smart street furniture to EV
-                charging stations and custom solar projects, we deliver
+                Discover advanced Solar-powered solutions designed to transform
+                Public and Private spaces. From Smart Street furniture to EV
+                charging stations and custom Solar projects, we deliver
                 energy-efficient innovations that blend functionality,
-                sustainability, and modern design.
+                sustainability, and modern design
               </p>
               <div className="d-inline-flex flex-wrap align-items-center">
-                <Link href="/contact" className="btn-one mt-15 me-4">
-                  Contact Us
-                </Link>
                 <Link href="/product" className="btn-one mt-15 me-4">
                   Product
+                </Link>
+                <Link href="/contact" className="btn-one mt-15 me-4">
+                  Contact Us
                 </Link>
               </div>
             </div>

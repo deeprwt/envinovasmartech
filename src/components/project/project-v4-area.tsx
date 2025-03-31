@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 // internal
 import portfolio_data from "@/data/portfolio-data";
 import ImageLightbox from "../common/image-lightbox";
@@ -30,14 +31,14 @@ const ProjectFourArea = () => {
   };
   return (
     <>
+     <ParallaxProvider>
       <div className="position-relative light-bg pt-120 lg-pt-80 service-details">
         <div className="container">
           <div className="position-relative">
             <div className="row">
               <div className="col-lg-12 wow fadeInLeft">
                 <div className="title-one text-center mb-50 lg-mb-30 md-mb-10 details-meta">
-                  <h2>Who is it for?
-                  </h2>
+                  <h2>Who is it for?</h2>
                 </div>
               </div>
             </div>
@@ -57,12 +58,14 @@ const ProjectFourArea = () => {
                     <div key={i} className="portfolio-item">
                       <div className="portfolio-block-one mb-10 lg-mb-40">
                         <div className="img-holder round-border">
-                          <Image
-                            src={item.img}
-                            style={imgStyle}
-                            alt="portfolio-img"
-                            className="img-meta w-100 tran5s"
-                          />
+                          <Parallax rotateY={[180, 570]}>
+                            <Image
+                              src={item.img}
+                              style={imgStyle}
+                              alt="portfolio-img"
+                              className="img-meta w-100 tran5s"
+                            />
+                          </Parallax>
                           <a
                             className="fancybox expend d-flex align-items-center justify-content-center tran3s cursor-pointer"
                             title="Click for large view"
@@ -88,7 +91,7 @@ const ProjectFourArea = () => {
                                   {item.title}
                                 </Link> */}
                               </h6>
-                              <p>{item.para}</p>
+                              {/* <p>{item.para}</p> */}
                             </div>
                             {/* <div>
                               <Link
@@ -128,6 +131,7 @@ const ProjectFourArea = () => {
         setIndex={setPhotoIndex}
       />
       {/* image light box end */}
+      </ParallaxProvider>
     </>
   );
 };

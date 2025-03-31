@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef,useState, useEffect  } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import Link from "next/link";
@@ -55,7 +55,6 @@ const imgStyle = {
 };
 
 const PortfolioTwo = () => {
-
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -92,7 +91,6 @@ const PortfolioTwo = () => {
   // Limit to 3 articles
   const limitedArticles = sortedArticles.slice(0, 6);
 
-
   const portfolio_items = portfolio_data.filter(
     (p) => p.portfolio === "portfolio-two"
   );
@@ -106,13 +104,21 @@ const PortfolioTwo = () => {
     sliderRef.current?.slickNext();
   };
   return (
-    <div className="portfolio-two service-details position-relative pt-150 lg-pt-80 pb-150 lg-pb-80" style={{background:"#f5f5f5"}}>
+    <div
+      className="portfolio-two service-details position-relative pt-150 lg-pt-80 pb-150 lg-pb-80"
+      style={{ background: "#f5f5f5" }}
+    >
       <div className="container">
         <div className="position-relative mb-80 lg-mb-40 details-meta">
           {/* ---------------------------------Section staring-------------------------------*/}
           <div className="d-flex justify-content-between align-items-center">
             <div className="title-one">
-              <h3 className="color-deep m0">Latest Article.</h3>
+              <h3 className="color-deep m0 pb-2">The Envinova Journal</h3>
+              <p className="text-lg mb-40 lg-mb-10">
+                {" "}
+                Discover how technology and sustainability are shaping the
+                future of infrastructure.
+              </p>
             </div>
             <ul className="slider-arrows slick-arrow-one d-flex justify-content-center style-none">
               <li onClick={sliderPrev} className="prev_b slick-arrow">
@@ -133,22 +139,20 @@ const PortfolioTwo = () => {
           ref={sliderRef}
           className="project-slider-one"
         >
-           {loading ? (
-              Array.from({ length: 4 }).map((_, index) => (
+          {loading
+            ? Array.from({ length: 4 }).map((_, index) => (
                 <div key={index} className="col-md-4 mb-5">
                   <Skeleton height={250} />
                   <Skeleton count={4} />
                 </div>
               ))
-            ) : (
-              limitedArticles.map((article) => (
+            : limitedArticles.map((article) => (
                 <div key={article.id} className="col-md-4">
                   <BlogItemSlider article={article} />
                   {/* <BlogItemTwo article={article} /> */}
                   {/* <ArticleWebsiteCard article={article} /> */}
                 </div>
-              ))
-            )}
+              ))}
         </Slider>
       </div>
       {/* ---------------------------------Slider Section End-------------------------------*/}

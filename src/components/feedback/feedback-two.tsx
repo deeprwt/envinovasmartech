@@ -36,8 +36,8 @@ const FeedbackTwo = () => {
           <div className="row">
             <div className="col-lg-8 m-auto">
               <div className="title-one text-center mb-80 lg-mb-40 wow fadeInUp">
-                <h2>Our Clients</h2>
-                <h4 className="pt-4">Why Our Clients Believe We Are the Best</h4>
+                <h2>What Our Clients Say</h2>
+                <h4 className="pt-4">Why they Believe we are the Best</h4>
               </div>
             </div>
           </div>

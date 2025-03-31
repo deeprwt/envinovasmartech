@@ -4,7 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 // internal
 import service_img from "@/assets/images/media/vision.jpg";
-import ramarao from "@/assets/images/thumbnail/solar_hut.jpg";
+import ramarao from "@/assets/images/thumbnail/solar.jpg";
 import SideBar from "./side-bar";
 import ImgGallery from "../gallery/img-gallery";
 
@@ -77,10 +77,10 @@ const OurCompanySection = () => {
                 Where comfort meets Sustainability & Connection
               </p>
               <Link
-                href="/contact"
+                href="/about-us"
                 className="btn-seventeen d-inline-flex align-items-center tran3s"
               >
-                <span className="text">Connect Now</span>
+                <span className="text">Know more</span>
                 <i className="bi bi-arrow-right"></i>
               </Link>
               {/* <Image

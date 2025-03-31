@@ -61,28 +61,27 @@ const NewsList = () => {
     <div className="blog-section-one service-details position-relative lg-mt-80 pt-120 lg-pt-80">
       <div className="container">
         <div className="position-relative">
-        <div className="title-one details-meta mb-20 lg-mb-10">
+          <div className="title-one details-meta mb-20 lg-mb-10">
             <h3>Latest Projects.</h3>
           </div>
           <p className="text-lg mb-40 lg-mb-10">
-          our newest Projects posts.
+            Explore how we're transforming spaces with smart, sustainable
+            innovations!
           </p>
           <div className="row gx-xxl-5">
-            {loading ? (
-              Array.from({ length: 3 }).map((_, index) => (
-                <div key={index} className="col-md-4 mb-5">
-                  <Skeleton height={250} />
-                  <Skeleton count={3} />
-                </div>
-              ))
-            ) : (
-              limitedArticles.map((newsItem) => (
-                <div key={newsItem.id} className="col-md-4">
-                  <BlogItemTwo news={newsItem} />
-                  {/* <ArticleWebsiteCard article={article} /> */}
-                </div>
-              ))
-            )}
+            {loading
+              ? Array.from({ length: 3 }).map((_, index) => (
+                  <div key={index} className="col-md-4 mb-5">
+                    <Skeleton height={250} />
+                    <Skeleton count={3} />
+                  </div>
+                ))
+              : limitedArticles.map((newsItem) => (
+                  <div key={newsItem.id} className="col-md-4">
+                    <BlogItemTwo news={newsItem} />
+                    {/* <ArticleWebsiteCard article={article} /> */}
+                  </div>
+                ))}
           </div>
           <div className="section-btn sm-mt-40">
             <Link href="/projects" className="btn-five icon-link">

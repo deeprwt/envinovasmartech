@@ -20,7 +20,8 @@ const BlogItemTwo: React.FC<NewsCardProps> = ({ news }) => {
     <article className="blog-meta-one mt-35 sm-mt-30 wow fadeInUp">
        <div className="post-data">
         <div className="post-info">
-          <span className="fw-500 text-dark">{news.author} -</span>   {news.date.split(" ")[0]} {news.date.split(" ")[1]}
+          {/* <span className="fw-500 text-dark">{news.author} -</span>    */}
+          {news.date.split(" ")[0]} {news.date.split(" ")[1]}
         </div>
         <Link href={`/projects/${news.link}`} className="mt-15">
           <h4 className="tran3s blog-title">{news.title}</h4>

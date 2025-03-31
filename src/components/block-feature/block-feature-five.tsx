@@ -47,7 +47,7 @@ const BlockFeatureFive = ({ number = 0 }) => {
               href="/service-v2"
               className="btn-seven d-inline-flex align-items-center"
             >
-              <span className="text">All Services</span>
+              <span className="text">Explore All</span>
               <div className="icon tran3s rounded-circle d-flex align-items-center">
                 <Image src={icon} alt="icon" className="lazy-img" />
               </div>
