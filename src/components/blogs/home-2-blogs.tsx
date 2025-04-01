@@ -65,7 +65,7 @@ const NewsList = () => {
             <h3>Latest Projects.</h3>
           </div>
           <p className="text-lg mb-40 lg-mb-10">
-            Explore how we're transforming spaces with smart, sustainable
+            Explore how we&apos;re transforming spaces with smart, sustainable
             innovations!
           </p>
           <div className="row gx-xxl-5">

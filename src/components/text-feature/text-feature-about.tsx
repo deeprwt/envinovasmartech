@@ -149,7 +149,7 @@ const TextFeatureAbout = ({ style_2 = false }: { style_2?: boolean }) => {
                     <p className="text-lg text-dark mb-35 md-mb-30">
                       Our innovation has garnered recognition on a national
                       stage. In <b>September 2024</b>, we proudly showcased the
-                      Smart Solar Hut to the Hon'ble Prime Minister of India,{" "}
+                      Smart Solar Hut to the Hon&apos;ble Prime Minister of India,{" "}
                       <b>Shri Narendra Modi</b>, at <b>Re-Invest</b>—a testament
                       to our commitment to advancing green technology and
                       driving change. <br /> <br />
