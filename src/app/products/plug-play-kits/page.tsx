@@ -39,10 +39,27 @@ const BlogPage = () => {
 
           {/* blog list area start */}
           {/* <BlogListArea /> */}
+          <div className="position-relative service-details mt-150">
+            <div className="container">
+              <div className="position-relative">
+                <div className="row">
+                  <div className="col-lg-12 wow fadeInLeft">
+                    <div className="title-one text-center mb-50 lg-mb-30 md-mb-10 details-meta">
+                      <h2>Plug and Play Kits</h2>
+                      <p className="">
+                        Compact, easy-to-use solar energy kits for homes and
+                        outdoor needs—powering lights, fans, and more with clean
+                        energy.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <BlogListAll category="Plug & Play Kits" />
           {/* blog list area end */}
 
-          <BlockFeatureFive number={8} />
 
           {/* fancy banner three start */}
           {/* <FancyBannerThree /> */}

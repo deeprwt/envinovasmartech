@@ -65,7 +65,7 @@ const BlogWebsiteCard: React.FC<BlogCardProps> = ({ blog }) => {
           </Link>
            <div className="">
            <Link href={`/products/${blog.link}`} className="cart-button">
-            View Now
+           {blog.title}
           </Link>
            </div>
         </div>

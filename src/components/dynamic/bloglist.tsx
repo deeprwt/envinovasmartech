@@ -17,7 +17,7 @@ type Blog = {
   title: string;
   author: string;
   post_info: string;
-  features:string;
+  features: string;
   category: string;
   metaKeywords: string;
   metaDescription: string;
@@ -57,33 +57,57 @@ const BlogList = () => {
 
   const { currentItems, handlePageClick, pageCount } = usePagination<Blog>(
     sortedBlogs,
-    9
+    8
   );
 
   return (
     <div className="blog-section-six position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
       <div className="container">
-        <div className="row gx-xl-5">
-          <div className="row">
-            {loading ? (
-              Array.from({ length: 9 }).map((_, index) => (
-                <div key={index} className="mb-5">
-                  <Skeleton height={250} />
-                  <Skeleton count={3} />
+        <div className="position-relative service-details">
+          <div className="container">
+            <div className="position-relative">
+              <div className="row">
+                <div className="col-lg-12 wow fadeInLeft">
+                  <div className="title-one text-center mb-50 lg-mb-30 md-mb-10 details-meta">
+                    <h2>Our Products</h2>
+                    <p className="">
+                      Discover our range of cutting-edge solar solutions,
+                      designed for smart spaces, energy conversion, and everyday
+                      convenience. From Smart Solar Huts to Plug & Play Solar
+                      kits, we bring innovation, sustainability, and efficiency
+                      to power your world.
+                    </p>
+                  </div>
                 </div>
-              ))
-            ) : (
-              currentItems.map((blog,i) => (
-                <div key={blog.id} className="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay={`0.${i}s`} >
-                  <BlogWebsiteCard blog={blog} />
-                </div>
-              ))
-            )}
-            <div className="pagination-one mt-80 lg-mt-50">
-              <Pagination handlePageClick={handlePageClick} pageCount={pageCount} />
+              </div>
             </div>
           </div>
-
+        </div>
+        <div className="row gx-xl-5">
+          <div className="row">
+            {loading
+              ? Array.from({ length: 8 }).map((_, index) => (
+                  <div key={index} className="mb-5 col-lg-6 col-sm-6">
+                    <Skeleton height={250} />
+                    <Skeleton count={3} />
+                  </div>
+                ))
+              : currentItems.map((blog, i) => (
+                  <div
+                    key={blog.id}
+                    className="col-lg-6 col-sm-6 wow fadeInUp"
+                    data-wow-delay={`0.${i}s`}
+                  >
+                    <BlogWebsiteCard blog={blog} />
+                  </div>
+                ))}
+            <div className="pagination-one mt-80 lg-mt-50">
+              <Pagination
+                handlePageClick={handlePageClick}
+                pageCount={pageCount}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

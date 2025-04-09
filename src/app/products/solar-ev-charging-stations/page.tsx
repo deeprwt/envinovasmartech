@@ -39,10 +39,25 @@ const BlogPage = () => {
 
           {/* blog list area start */}
           {/* <BlogListArea /> */}
+          <div className="position-relative service-details mt-150">
+            <div className="container">
+              <div className="position-relative">
+                <div className="row">
+                  <div className="col-lg-12 wow fadeInLeft">
+                    <div className="title-one text-center mb-50 lg-mb-30 md-mb-10 details-meta">
+                      <h2>Solar EV Charging Stations</h2>
+                      <p className="">
+                      Power the future of mobility with our <b>solar-powered EV charging solutions</b>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <BlogListAll category="Solar EV Charging Stations" />
           {/* blog list area end */}
 
-          <BlockFeatureFive number={8} />
 
           {/* fancy banner three start */}
           {/* <FancyBannerThree /> */}

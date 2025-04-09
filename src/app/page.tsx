@@ -48,7 +48,7 @@ const backImg2 = {
   backgroundSize: "auto",
   backgroundPosition: "center",
   backgroundAttachment: "local",
-  backgroundColor: "#292e31",
+  backgroundColor: "#1b1f22",
 };
 
 export const metadata = {
@@ -84,6 +84,16 @@ export default function HomePage() {
           {/* <HeroVideoOne /> */}
           {/* <HeroBannerTwo /> */}
           {/* <HeroBannerSeven /> */}
+          <div className="position-relative mt-100 py-3 bg-dark">
+            <div className="text-center text-white">
+              <Link
+                href="/advertise"
+                className="d-flex align-items-center justify-content-center"
+              >
+                Advertise With Us
+              </Link>
+            </div>
+          </div>
           <HeroBannerEight />
 
           {/* hero banner end */}
@@ -126,26 +136,25 @@ export default function HomePage() {
                           Have a Project? Connect With Us
                         </h2>
                       </div>
-                      <p className="text-lg mt-45 lg-mt-30 mb-35 lg-mb-20 paracolor">
-                        Beyond our listed offerings, we specialize in providing
-                        <b>custom solar solutions</b> to meet diverse needs.
+                      <p className="text-lg mt-45 lg-mt-30 mb-35 lg-mb-20 text-white">
+                        Beyond our listed offerings, we specialize in providing 
+                        <b> custom solar solutions</b> to meet diverse needs.
                         From transforming outdoor spaces with innovative solar
                         integrations to handling large-scale{" "}
                         <b>C&I (Commercial & Industrial) projects</b>, we are
                         your{" "}
                         <b>one-stop destination for solar-powered solutions</b>.
                       </p>
-                      <p className="text-lg mt-45 lg-mt-30 mb-35 lg-mb-20 paracolor">
+                      <p className="text-lg mt-45 lg-mt-30 mb-35 lg-mb-20 text-white">
                         Whether you need bespoke solar installations,
                         eco-friendly infrastructure, or public convenience
                         projects, we bring expertise, creativity, and
                         sustainable energy innovation to every endeavor.
                       </p>
-                      <Link
-                        href="/contact"
-                        className="btn-two icon-link"
-                      >
-                        <span className="text-white">Let&apos;s Collaborate</span>
+                      <Link href="/contact" className="btn-two icon-link">
+                        <span className="text-white">
+                          Let&apos;s Collaborate
+                        </span>
                         <div className="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
                           <i className="bi bi-arrow-right"></i>
                         </div>

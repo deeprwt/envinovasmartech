@@ -65,22 +65,40 @@ const ArticleList = () => {
   return (
     <div className="blog-section-two position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
       <div className="container">
+        <div className="position-relative service-details">
+          <div className="container">
+            <div className="position-relative">
+              <div className="row">
+                <div className="col-lg-12 wow fadeInLeft">
+                  <div className="title-one text-center mb-50 lg-mb-30 md-mb-10 details-meta">
+                    <h2>The Envinova Journal</h2>
+                    <p className="">
+                      Stay updated with the latest in solar innovation,
+                      sustainability, and smart infrastructure. From industry
+                      insights to our journey in transforming public spaces,
+                      explore stories that shape the future of clean energy.
+                      Dive in and discover how we’re making an impact!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="position-relative">
-          <div className="row gx-xxl-5 m-auto justify-content-center">
-            {loading ? (
-              Array.from({ length: 9 }).map((_, index) => (
-                <div key={index} className="col-md-4 mb-5">
-                  <Skeleton height={250} />
-                  <Skeleton count={1} />
-                </div>
-              ))
-            ) : (
-              currentItems.map((article) => (
-                <div key={article.id} className="col-md-10">
-                  <ArticleWebsiteCard article={article} />
-                </div>
-              ))
-            )}
+          <div className="row gx-xxl-5 m-auto justify-content-start">
+            {loading
+              ? Array.from({ length: 9 }).map((_, index) => (
+                  <div key={index} className="col-md-4 mb-5">
+                    <Skeleton height={250} />
+                    <Skeleton count={1} />
+                  </div>
+                ))
+              : currentItems.map((article) => (
+                  <div key={article.id} className="col-md-4">
+                    <ArticleWebsiteCard article={article} />
+                  </div>
+                ))}
           </div>
           <div className="pagination-one mt-20">
             <Pagination

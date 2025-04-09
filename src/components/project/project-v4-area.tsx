@@ -51,7 +51,7 @@ const ProjectFourArea = () => {
             <div id="isotop-gallery-wrapper" className="column-two">
               <div className="grid-sizer"></div>
               <ResponsiveMasonry
-                columnsCountBreakPoints={{ 0: 1, 572: 2, 992: 3 }}
+                columnsCountBreakPoints={{ 0: 1, 572: 2, 992: 4 }}
               >
                 <Masonry gutter="40px">
                   {portfolio_items.map((item, i) => (

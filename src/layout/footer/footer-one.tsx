@@ -78,19 +78,22 @@ const FooterOne = () => {
                 <h5 className="footer-title">Solutions</h5>
                 <ul className="footer-nav-link style-none">
                   <li>
-                    <Link href="/">Product 1</Link>
+                    <Link href="/products/smart-solar-spaces">Smart Solar Spaces</Link>
                   </li>
                   <li>
-                    <Link href="/product/podiascanner">Product 2</Link>
+                    <Link href="/products/solar-ev-charging-stations">Solar EV Charging Stations</Link>
                   </li>
                   <li>
-                    <Link href="/product/footscan">Product 3</Link>
+                    <Link href="/products/solar-prefab-cabins">Solar Prefab Cabins</Link>
                   </li>
                   <li>
-                    <Link href="/product/pressure-mat">Product 4</Link>
+                    <Link href="/products/solar-conversion-solutions">Solar Conversion Solutions</Link>
                   </li>
                   <li>
-                    <Link href="/product/foot-pressure-mapping">Product 5</Link>
+                    <Link href="/products/solar-rooftop">Solar Rooftop</Link>
+                  </li>
+                  <li>
+                    <Link href="/products/plug-play-kits">Plug and Play Kits</Link>
                   </li>
                 </ul>
               </div>
@@ -109,9 +112,9 @@ const FooterOne = () => {
                   <li>
                     <Link href="/article">Media</Link>
                   </li>
-                  {/* <li>
-                  <Link href="/internship">Internship Program</Link>
-                </li> */}
+                  <li>
+                  <Link href="/contact">Contact Us</Link>
+                </li>
                 </ul>
               </div>
               <div className="col-xl-2 col-md-2 col-sm-4 mb-20">

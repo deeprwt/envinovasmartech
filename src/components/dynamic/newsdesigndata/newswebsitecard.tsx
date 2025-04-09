@@ -16,6 +16,10 @@ type NewsCardProps = {
 };
 
 const NewsWebsiteCard: React.FC<NewsCardProps> = ({ news }) => {
+  const s_date = new Date(news.date);
+const month = s_date.toLocaleString('en-us', { month: 'short' });
+const year = s_date.getFullYear();
+const formattedDate = `${month} ' ${year}`;
   return (
     <article className="blog-meta-two mb-80 lg-mb-50 wow fadeInUp"
     data-wow-delay="0.1s"
@@ -25,7 +29,8 @@ const NewsWebsiteCard: React.FC<NewsCardProps> = ({ news }) => {
         style={{ backgroundImage: `url(${news.imageUrl || news.image})`}}
       >
         <Link href={`/projects/${news.link}`} className="stretched-link rounded-5 date tran3s">
-          {news.date.split(" ")[0]} {news.date.split(" ")[1]}
+          {/* {news.date.split(" ")[0]} {news.date.split(" ")[1]} */}
+          <span style={{textTransform:'capitalize'}}>{formattedDate}</span> 
         </Link>
       </figure>
       <div className="post-data">
@@ -37,7 +42,7 @@ const NewsWebsiteCard: React.FC<NewsCardProps> = ({ news }) => {
           <Link href={`/projects/${news.link}`}
             className="btn-one tran3s"
           >
-           View Details...
+          Read More
           </Link>
           {/* <Link href={`/projects/${news.link}`}
             className="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"

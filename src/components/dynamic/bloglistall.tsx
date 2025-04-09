@@ -64,13 +64,13 @@ const BlogListAll = ({ category }: { category: string }) => {
   );
 
   return (
-    <div className="blog-section-six position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
+    <div className="blog-section-six position-relative lg-mt-80 mb-150 lg-mb-80">
       <div className="container">
         <div className="row gx-xl-5">
           <div className="row">
             {loading ? (
               Array.from({ length: 9 }).map((_, index) => (
-                <div key={index} className="mb-5">
+                <div key={index} className="mb-5 col-lg-6 col-sm-6">
                   <Skeleton height={250} />
                   <Skeleton count={3} />
                 </div>

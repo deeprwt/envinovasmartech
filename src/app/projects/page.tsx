@@ -43,7 +43,7 @@ const BlogGridPage = () => {
           {/* blog grid area end */}
 
           {/* <BlockFeatureFive number={8} /> */}
-          <FeedBackTap />
+          {/* <FeedBackTap /> */}
 
           {/* fancy banner three start */}
           {/* <FancyBannerThree /> */}

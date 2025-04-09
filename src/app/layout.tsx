@@ -6,7 +6,7 @@ import "./globals.scss";
 import { Providers } from "@/redux/provider";
 
 export const metadata: Metadata = {
-  title: "CGB Solutions",
+  title: "Envinova",
   description:
     "Empower your business with CGB Solutions' IT expertise. Strategic consulting & managed services for peak performance. Contact us.",
 };

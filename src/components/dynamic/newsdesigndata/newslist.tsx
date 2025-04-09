@@ -61,22 +61,41 @@ const NewsList = () => {
   return (
     <div className="blog-section-two position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
       <div className="container">
+        <div className="position-relative service-details">
+          <div className="container">
+            <div className="position-relative">
+              <div className="row">
+                <div className="col-lg-12 wow fadeInLeft">
+                  <div className="title-one text-center mb-50 lg-mb-30 md-mb-10 details-meta">
+                    <h2>Our Projects</h2>
+                    <p className="">
+                      Brief: Read how we&apos;ve transformed public
+                      infrastructure with our innovative solar solutions! With
+                      installations in 10+ cities and expanding PAN India, our
+                      projects are redefining how solar energy integrates into
+                      everyday life. Explore how each installation is changing
+                      the way we experience sustainable technology.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="position-relative">
           <div className="row gx-xxl-5">
-            {loading ? (
-              Array.from({ length: 4 }).map((_, index) => (
-                <div key={index} className="col-md-6 mb-5">
-                  <Skeleton height={250} />
-                  <Skeleton count={2} />
-                </div>
-              ))
-            ) : (
-              currentItems.map((newsItem) => (
-                <div key={newsItem.id} className="col-md-6">
-                  <NewsWebsiteCard news={newsItem} />
-                </div>
-              ))
-            )}
+            {loading
+              ? Array.from({ length: 4 }).map((_, index) => (
+                  <div key={index} className="col-md-6 mb-5">
+                    <Skeleton height={250} />
+                    <Skeleton count={2} />
+                  </div>
+                ))
+              : currentItems.map((newsItem) => (
+                  <div key={newsItem.id} className="col-md-6">
+                    <NewsWebsiteCard news={newsItem} />
+                  </div>
+                ))}
           </div>
           <div className="pagination-one mt-20">
             <Pagination
