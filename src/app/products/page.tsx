@@ -120,7 +120,7 @@ const BlogPage = () => {
                         <h2 className="">Want to Partner with Us?</h2>
                       </div>
                       <p className="text-lg mt-45 lg-mt-30 mb-35 lg-mb-20">
-                        Join us in driving the solar revolution! Whether you're
+                        Join us in driving the solar revolution! Whether you&apos;re
                         looking to become a <b>distributor, reseller, or channel
                         partner</b>, Envinova offers exciting opportunities to grow
                         with us. Partner with a brand committed to innovation
