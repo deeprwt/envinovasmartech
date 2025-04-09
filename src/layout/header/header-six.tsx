@@ -107,6 +107,16 @@ const HeaderSix = () => {
           </div>
         </div>
       </header>
+      <div className="position-relative sm-mt-60 md-mt-100 lg-mt-100 mt-100 py-3 bg-dark">
+        <div className="text-center text-white">
+          <Link
+            href="/advertise"
+            className="d-flex align-items-center justify-content-center"
+          >
+            Innovate. Advertise. Connect.
+          </Link>
+        </div>
+      </div>
 
       {/* login modal start */}
       <LoginModal />

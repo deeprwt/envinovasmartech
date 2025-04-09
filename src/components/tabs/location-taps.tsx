@@ -90,7 +90,7 @@ const LocationTabsData = () => {
                       title="Contact Us "
                       subtitle="
                           If there is anything we can help you with just drop a mail at "
-                      para="care@envinovasmartech.com"
+                      para="envinovasmartech@gmail.com"
                     />
                   </div>
 

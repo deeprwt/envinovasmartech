@@ -112,45 +112,45 @@ const TextFeatureHome = ({ style_2 = false }: { style_2?: boolean }) => {
         // style={{background:"#292e31"}}
         >
           <div className="">
-            <div className="counter-wrapper pt-80 pb-80 lg-mt-20 lg-mb-20">
+            <div className="counter-wrapper pt-80 lg-mt-20  ">
               <div className="row">
                 <div className="title-one details-meta">
                   {/* <div className="upper-title">About Us</div> */}
                   {/* <h2 style={{ color: "#62c087" }}>By the Numbers</h2> */}
                 </div>
                 <div
-                  className="col-md-4 col-6"
+                  className="col-md-4 col-4"
                   style={{ background: "#172a44", border: "1px solid gray" }}
                 >
                   <CounterBlock
-                    num={10}
-                    text="K+"
+                    num={27}
+                    text="+"
                     title="Total Installations"
                     delay="2"
                   />
                 </div>
                 <div
-                  className="col-md-4 col-6"
+                  className="col-md-4 col-4"
                   style={{ background: "#172a44", border: "1px solid gray" }}
                 >
                   <CounterBlock
-                    num={25}
-                    text="K+"
-                    title="Active Users"
+                    num={500}
+                    text=""
+                    title="Total Visitors"
                     // prev_text="$"
                     delay="2"
                     // decimal={true}
                   />
                 </div>
                 <div
-                  className="col-md-4 col-6"
+                  className="col-md-4 col-4"
                   style={{ background: "#172a44", border: "1px solid gray" }}
                 >
                   <CounterBlock
-                    num={200}
-                    text="K+"
-                    title="Total Revenue Earned"
-                    prev_text="$"
+                    num={600}
+                    text="+"
+                    title="Tonnes of CO2 mitigated"
+                    // prev_text="$"
                     delay="2"
                   />
                 </div>

@@ -70,15 +70,15 @@ const ContactArea = () => {
                         encounter any issues with our products, feel free to
                         contact us{" "}
                         <a
-                          href="mailto:care@envinovasmartech.com"
+                          href="mailto:envinovasmartech@gmail.com"
                           style={{ color: "#62c087" }}
                         >
-                          care@envinovasmartech.com
+                          envinovasmartech@gmail.com
                         </a>
                       </p>
                       <p className="text-white lh-sm mb-35 ">
                         <Link
-                          href="mailto:care@envinovasmartech.com"
+                          href="mailto:envinovasmartech@gmail.com"
                           className="d-flex align-items-center"
                         >
                           <Image
@@ -86,7 +86,7 @@ const ContactArea = () => {
                             alt="icon"
                             className="lazy-img icon me-3"
                           />
-                          care@envinovasmartech.com
+                          envinovasmartech@gmail.com
                         </Link>{" "}
                         <br />
                         <Link href="tel:9872230560" className="d-flex">

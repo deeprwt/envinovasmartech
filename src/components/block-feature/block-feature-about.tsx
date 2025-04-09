@@ -98,13 +98,10 @@ const BlockFeatureAbout = ({ style_2 = false }: { style_2?: boolean }) => {
               <div className="col-lg-12">
                 <div className="row">
                   <div className="title-one details-meta">
-                    <h3>Our Services</h3>
+                    <h3>Maintenance & Support</h3>
                   </div>
                   <p className="text-lg text-dark mb-35 md-mb-30">
-                    We understand that after-sales service and maintenance can
-                    be a challenge. That&apos;s why we offer{" "}
-                    <b>customized packages</b> to ensure the optimal performance
-                    of our products and their efficient use.
+                  Ensure uninterrupted performance with our <b>comprehensive maintenance services</b>, designed to keep your solar installations running efficiently for years.
                   </p>
                   {/* <div className="col-lg-4 wow fadeInLeft"></div> */}
                   {/* {service_items.map((item, i) => (

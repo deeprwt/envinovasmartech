@@ -31,14 +31,14 @@ export async function POST(request: Request) {
 
     const mailOptions = {
       from: `"Contact Form" <${emailUser}>`,
-      to: ["marketing.cgbindia@gmail.com"], // Send to the user's submitted email
+      to: ["marketing.cgbindia@gmail.com", "envinovasmartech@gmail.com"], // Send to the user's submitted email
       subject: 'Contact Form Submission Confirmation',
-      text: `Hello ${name},\n\nThank you for contacting us! We have received your message:\n\n"${message}"\n\nWe will get back to you shortly.\n\nBest regards,\nYour Company`,
+      text: `Hello ${name},\n\nThank you for contacting us! We have received your message:\n\n"${message}"\n\nWe will get back to you shortly.\n\nBest regards,\nEnvinova Smartech`,
       html: `<p>Hello <strong>${name}</strong>,</p>
              <p>Thank you for contacting us! We have received your message:</p>
              <blockquote>${message}</blockquote>
              <p>We will get back to you shortly.</p>
-             <p>Best regards,<br>Your Company</p>`,
+             <p>Best regards,<br>Envinova Smartech</p>`,
     };
 
     // Send the email

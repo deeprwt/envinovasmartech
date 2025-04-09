@@ -52,21 +52,21 @@ const backImg2 = {
 };
 
 export const metadata = {
-  title: "Advanced Foot Systems Podiatry | Diabetic Foot Care Solutions",
+  title: "Envinova Smartech – Innovating Sustainable Outdoor Solutions",
   description:
-    "DiscoverEnvinoa Tech flexible pressure sensor technology designed for diabetic foot care, providing accurate podiatry insights to enhance foot health and prevent complications.",
+    "Envinova Smartech designs and builds Smart Solar Huts, providing eco-friendly outdoor spaces equipped with solar-powered charging, Wi-Fi, and comfortable seating to promote sustainability and connectivity.",
   keywords:
-    "foot systems podiatry, flexible pressure sensor, Diabetic Foot Care ",
+    "Envinova Smartech, Smart Solar Huts, sustainable outdoor spaces, solar-powered charging, eco-friendly public spaces, solar energy solutions, sustainability, climate change solutions",
   openGraph: {
-    title: "Advanced Foot Systems Podiatry | Diabetic Foot Care Solutions",
+    title: "Envinova Smartech – Innovating Sustainable Outdoor Solutions",
     description:
-      "DiscoverEnvinoa Tech flexible pressure sensor technology designed for diabetic foot care, providing accurate podiatry insights to enhance foot health and prevent complications.",
+      "Envinova Smartech designs and builds Smart Solar Huts, providing eco-friendly outdoor spaces equipped with solar-powered charging, Wi-Fi, and comfortable seating to promote sustainability and connectivity.",
     images: [
       {
         url: "@/assets/images/logo/logo.png", // URL of the image
         width: 1200, // Optional: specify the width of the image
         height: 630, // Optional: specify the height of the image
-        alt: "Pistar logo Image", // Optional: alternative text for the image
+        alt: "logo Image", // Optional: alternative text for the image
       },
     ],
   },
@@ -84,16 +84,6 @@ export default function HomePage() {
           {/* <HeroVideoOne /> */}
           {/* <HeroBannerTwo /> */}
           {/* <HeroBannerSeven /> */}
-          <div className="position-relative mt-100 py-3 bg-dark">
-            <div className="text-center text-white">
-              <Link
-                href="/advertise"
-                className="d-flex align-items-center justify-content-center"
-              >
-                Advertise With Us
-              </Link>
-            </div>
-          </div>
           <HeroBannerEight />
 
           {/* hero banner end */}

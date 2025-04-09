@@ -65,7 +65,7 @@ const ProudctFeatureSection = () => {
         <div className="line-wrapper position-relative">
           <div className="row gx-lg-5">
             <div className="col-xl-4 col-md-4 col-12 wow fadeInUp">
-              <div className="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
+              <div className="card-style-sixteen flex-row-reverse flex-md-row d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
                 <div className="text px-0 d-flex align-items-center justify-content-center">
                   <h4 className="fw-bold sm-mb-10 text-white">
                     Solar-Powered Innovation
@@ -75,7 +75,7 @@ const ProudctFeatureSection = () => {
                   <Image src={icon} alt="icon" className="lazy-img" />
                 </div>
               </div>
-              <div className="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
+              <div className="card-style-sixteen flex-row-reverse flex-md-row d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
                 <div className="text px-0 d-flex align-items-center justify-content-center">
                   <h4 className="fw-bold sm-mb-10 text-white">
                     Integrated Functionality
@@ -85,7 +85,7 @@ const ProudctFeatureSection = () => {
                   <Image src={icon} alt="icon" className="lazy-img" />
                 </div>
               </div>
-              <div className="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
+              <div className="card-style-sixteen flex-row-reverse flex-md-row d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
                 <div className="text px-0 d-flex align-items-center justify-content-center">
                   <h4 className="fw-bold sm-mb-10 text-white">
                     Portable and Flexible Designs
@@ -95,7 +95,7 @@ const ProudctFeatureSection = () => {
                   <Image src={icon} alt="icon" className="lazy-img" />
                 </div>
               </div>
-              <div className="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
+              <div className="card-style-sixteen flex-row-reverse flex-md-row d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
                 <div className="text px-0 d-flex align-items-center justify-content-center">
                   <h4 className="fw-bold sm-mb-10 text-white">
                     Smart Technology Integration
@@ -105,7 +105,7 @@ const ProudctFeatureSection = () => {
                   <Image src={icon} alt="icon" className="lazy-img" />
                 </div>
               </div>
-              <div className="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
+              <div className="card-style-sixteen flex-row-reverse flex-md-row d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
                 <div className="text px-0 d-flex align-items-center justify-content-center">
                   <h4 className="fw-bold sm-mb-10 text-white">
                     Durable and Weather-Resistant
@@ -116,7 +116,7 @@ const ProudctFeatureSection = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xl-4 col-md-4 col-12 wow fadeInUp d-flex align-items-center">
+            <div className="col-xl-4 col-md-4 col-12 wow fadeInUp d-flex align-items-center justify-content-center">
               <div className="p-4">
                 <Image
                   src={solarimg}
